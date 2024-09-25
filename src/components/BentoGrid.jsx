@@ -35,11 +35,14 @@ function BentoGrid() {
               <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
               </p>
-              <h3 className="font-extrabold text-7xl">Benjamin Schäfer</h3>
+              <h3 className="text-7xl">Benjamin Schäfer</h3>
             </div>
-            <div className="bg-green-500 w-fit px-3 py-2 rounded-full self-end">
-              <FontAwesomeIcon icon={faUserPlus} />
-              <span className="pl-2">Let's connect</span>
+            <div className="flex justify-between">
+              <p className="font-bold text-4xl self-center">I make Websites.</p>
+              <div className="bg-green-500 w-fit h-fit py-2 px-3 rounded-full self-center">
+                <FontAwesomeIcon icon={faUserPlus} />
+                <span className="pl-2">Let's connect</span>
+              </div>
             </div>
           </GridTile>
           <GridTile className="col-span-4 row-span-2 col-start-5 row-start-1 flex items-center justify-center">
@@ -89,9 +92,6 @@ function BentoGrid() {
               </div>
             </div>
           </GridTile>
-          <GridTile className="col-span-4 col-start-5 row-start-5">
-            <p className="font-bold text-4xl">I make Websites.</p>
-          </GridTile>
           <GridTile
             className="col-span-2 row-span-2 col-start-3 row-start-5"
             noPadding
@@ -106,7 +106,7 @@ function BentoGrid() {
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </GridTile>
-          <GridTile className="col-span-4 col-start-5 row-start-6">
+          <GridTile className="col-span-4 row-span-2 col-start-5 row-start-5">
             <MyGithubCalendar />
           </GridTile>
           <GridTile
@@ -127,7 +127,10 @@ function BentoGrid() {
               <BrandIcon icon={SiPython} name="Python" />
             </div>
           </GridTile>
-          <GridTile className="flex justify-center" noPadding>
+          <GridTile
+            className="flex justify-center col-start-1 row-start-1"
+            noPadding
+          >
             <a
               href="https://www.linkedin.com/in/beni-schaefer/"
               rel="noopener noreferrer"
