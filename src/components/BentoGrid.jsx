@@ -7,7 +7,18 @@ function BentoGrid() {
       <h2 className="hidden">About me</h2>
       <div className="flex justify-center">
         <div className="grid grid-cols-4 gap-4 size-[80vw]">
-          <GridTile className="col-span-2 row-span-2">This is me</GridTile>
+          <GridTile className="col-span-2 row-span-2">
+            <img
+              src="/headshot.png"
+              alt="Headshot"
+              className="rounded-full w-1/3 aspect-square mb-12"
+            />
+            <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
+              Hi, my name is
+            </p>
+            <h3 className="font-extrabold text-7xl mb-4">Benjamin Schäfer</h3>
+            <p className="font-bold text-5xl">and I make Websites.</p>
+          </GridTile>
           <GridTile className="col-span-2">
             I have the following Certifications
           </GridTile>
