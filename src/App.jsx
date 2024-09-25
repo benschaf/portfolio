@@ -17,7 +17,7 @@ function App() {
         <ColorThemeSwitch />
       </Header>
       <main>
-        <HeroSection />
+        {/* <HeroSection /> */}
         <BentoGrid />
         <Projects />
         <Testimonials />

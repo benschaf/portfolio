@@ -1,28 +1,101 @@
 import React from "react";
 import GridTile from "./GridTile";
+import BrandIcon from "./BrandIcon";
+import CodeInstituteLogo from "./CodeInstituteLogo";
+import PHTGLogo from "./PHTGLogo";
+import MyGithubCalendar from "./MyGithubCalendar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  SiDjango,
+  SiReact,
+  SiTailwindcss,
+  SiBootstrap,
+  SiJquery,
+  SiGit,
+  SiHeroku,
+  SiHtml5,
+  SiJavascript,
+  SiCss3,
+  SiPython,
+  SiStripe,
+  SiLinkedin,
+  SiGithub,
+  SiCodeigniter,
+} from "@icons-pack/react-simple-icons";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
 function BentoGrid() {
   return (
     <section>
       <h2 className="hidden">About me</h2>
       <div className="flex justify-center">
-        <div className="grid grid-cols-4 gap-4 size-[80vw]">
-          <GridTile className="col-span-2 row-span-2">
-            <img
-              src="/headshot.png"
-              alt="Headshot"
-              className="rounded-full w-1/3 aspect-square mb-12"
-            />
-            <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
-              Hi, my name is
-            </p>
-            <h3 className="font-extrabold text-7xl mb-4">Benjamin Schäfer</h3>
-            <p className="font-bold text-5xl">and I make Websites.</p>
+        <div className="grid grid-cols-8 gird-rows-6 gap-4 w-[80vw]">
+          <GridTile className="col-span-4 row-span-2 col-start-3 row-start-3 p-10 flex flex-col justify-between">
+            <div>
+              <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
+                Hi, my name is
+              </p>
+              <h3 className="font-extrabold text-7xl">Benjamin Schäfer</h3>
+            </div>
+            <div className="bg-green-500 w-fit px-3 py-2 rounded-full self-end">
+              <FontAwesomeIcon icon={faUserPlus} />
+              <span className="pl-2">Let's connect</span>
+            </div>
           </GridTile>
-          <GridTile className="col-span-2">
-            I have the following Certifications
+          <GridTile className="col-span-4 row-span-2 col-start-5 row-start-1 flex items-center justify-center">
+            <div className="grid grid-cols-4 gap-y-2 justify-items-center">
+              <BrandIcon icon={SiDjango} name="Django" />
+              <BrandIcon icon={SiReact} name="React" />
+              <BrandIcon icon={SiTailwindcss} name="Tailwind" />
+              <BrandIcon icon={SiBootstrap} name="Bootstrap" />
+              <BrandIcon icon={SiJquery} name="jQuery" />
+              <BrandIcon icon={SiGit} name="Git" />
+              <BrandIcon icon={SiHeroku} name="Heroku" />
+              <BrandIcon icon={SiStripe} name="Stripe" />
+            </div>
           </GridTile>
-          <GridTile className="h-full" noPadding>
+          <GridTile className="row-span-2 col-start-7 row-start-3 col-span-2 bg-emerald-400 flex justify-center items-center">
+            <a
+              href="https://1drv.ms/b/s!AiW3_9fEY4hWie0M5GfzPjSbVOYMiA?e=uGcNuN"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-between"
+            >
+              <img
+                src="/cv_thumbnail.png"
+                alt="CV Thumbnail"
+                className="w-2/3 object-scale-down"
+              />
+              <div className="bg-green-500 w-fit px-3 py-2 rounded-full">
+                get my CV
+              </div>
+            </a>
+          </GridTile>
+          <GridTile className="col-span-2 row-span-3 col-start-1 row-start-4 p-4 bg-white shadow-lg rounded-lg">
+            <div className="flex flex-col items-center space-y-4">
+              <CodeInstituteLogo className="h-10 mx-auto" />
+              <div className="text-center">
+                <p className="text-lg font-semibold">
+                  Diploma: Fullstack Web Development
+                </p>
+                <p className="text-sm text-gray-600">Grade: Distinction</p>
+              </div>
+              <hr className="w-full border-t-2 border-gray-300 my-4" />
+              <PHTGLogo className="h-10 mx-auto" />
+              <div className="text-center">
+                <p className="text-lg font-semibold">
+                  Diploma: Master of Arts and Education
+                </p>
+              </div>
+            </div>
+          </GridTile>
+          <GridTile className="col-span-4 col-start-5 row-start-5">
+            <p className="font-bold text-4xl">I make Websites.</p>
+          </GridTile>
+          <GridTile
+            className="col-span-2 row-span-2 col-start-3 row-start-5"
+            noPadding
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88424.03638441453!2d10.893116525075726!3d50.26030977205642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a3ce1441f48837%3A0x41db728f061d9a0!2s96450%20Coburg!5e1!3m2!1sde!2sde!4v1727172427223!5m2!1sde!2sde"
               width="100%"
@@ -33,17 +106,51 @@ function BentoGrid() {
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </GridTile>
-
-          <GridTile className="row-span-2">
-            I know the following Technologies
+          <GridTile className="col-span-4 col-start-5 row-start-6">
+            <MyGithubCalendar />
           </GridTile>
-          <GridTile className="row-span-2">
-            This is the project I am most proud of.
+          <GridTile
+            className="col-span-2 row-span-2 col-start-1 row-start-2"
+            noPadding
+          >
+            <img
+              src="/headshot.png"
+              alt="Headshot"
+              className="rounded-3xl w-full h-full object-cover"
+            />
           </GridTile>
-          <GridTile className="col-span-2">This is my resume</GridTile>
-          <GridTile className="">This is how you can reach out to me</GridTile>
-          <GridTile className="col-span-2">
-            These are my up to date github stats.
+          <GridTile className="row-span-2 col-span-2 col-start-3 row-start-1 flex items-center justify-center">
+            <div className="grid grid-cols-2 gap-y-2 justify-items-center">
+              <BrandIcon icon={SiHtml5} name="HTML5" />
+              <BrandIcon icon={SiJavascript} name="JavaScript" />
+              <BrandIcon icon={SiCss3} name="CSS3" />
+              <BrandIcon icon={SiPython} name="Python" />
+            </div>
+          </GridTile>
+          <GridTile className="flex justify-center" noPadding>
+            <a
+              href="https://www.linkedin.com/in/beni-schaefer/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="LinkedIn Profile"
+              className="flex items-center"
+            >
+              <BrandIcon icon={SiLinkedin} name="connect" color="default" />
+            </a>
+          </GridTile>
+          <GridTile
+            className="col-start-2 row-start-1 flex justify-center"
+            noPadding
+          >
+            <a
+              href="https://github.com/benschaf"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="GitHub Profile"
+              className="flex items-center"
+            >
+              <BrandIcon icon={SiGithub} name="benschaf" color="default" />
+            </a>
           </GridTile>
         </div>
       </div>
