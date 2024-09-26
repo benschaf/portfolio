@@ -1,11 +1,31 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faExternalLink,
+  faExternalLinkAlt,
+  faExternalLinkSquare,
+  faExternalLinkSquareAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
-function BrandIcon({ icon, name, ...props }) {
-const siIcon = React.createElement(icon, { size: "2em", ...props });
+function BrandIcon({ icon, name, link, className, ...props }) {
+  const siIcon = React.createElement(icon, { size: "2em" });
+
   return (
-    <div className="flex flex-col items-center justify-center size-[5em] text-blue-400">
+    <div className="flex flex-col items-center justify-center size-[5em]">
       {siIcon}
-      <span>{name}</span>
+      {!link ? (
+        <span>{name}</span>
+      ) : (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center"
+        >
+          {name}{" "}
+          <FontAwesomeIcon icon={faExternalLinkSquareAlt} className="ml-2" />
+        </a>
+      )}
     </div>
   );
 }

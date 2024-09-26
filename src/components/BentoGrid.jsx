@@ -19,8 +19,10 @@ import {
   SiPython,
   SiStripe,
   SiLinkedin,
+  SiLinkedinHex,
   SiGithub,
   SiCodeigniter,
+  SiGithubHex,
 } from "@icons-pack/react-simple-icons";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
@@ -35,7 +37,7 @@ function BentoGrid() {
               <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
               </p>
-              <h3 className="text-7xl">Benjamin Schäfer</h3>
+              <h3 className="font-extrabold text-7xl">Benjamin Schäfer</h3>
             </div>
             <div className="flex justify-between">
               <p className="font-bold text-4xl self-center">I make Websites.</p>
@@ -128,7 +130,7 @@ function BentoGrid() {
             </div>
           </GridTile>
           <GridTile
-            className="flex justify-center col-start-1 row-start-1"
+            className={`flex justify-center col-start-1 row-start-1 bg-[#0a66c2]`}
             noPadding
           >
             <a
@@ -138,11 +140,11 @@ function BentoGrid() {
               aria-label="LinkedIn Profile"
               className="flex items-center"
             >
-              <BrandIcon icon={SiLinkedin} name="connect" color="default" />
+              <BrandIcon icon={SiLinkedin} name={SiLinkedinHex} link="https://www.linkedin.com/in/beni-schaefer/" />
             </a>
           </GridTile>
           <GridTile
-            className="col-start-2 row-start-1 flex justify-center"
+            className={`col-start-2 row-start-1 flex justify-center bg-[#181717]`}
             noPadding
           >
             <a
@@ -152,7 +154,7 @@ function BentoGrid() {
               aria-label="GitHub Profile"
               className="flex items-center"
             >
-              <BrandIcon icon={SiGithub} name="benschaf" color="default" />
+              <BrandIcon icon={SiGithub} name="benschaf" link="https://github.com/benschaf" className="invert-icon" />
             </a>
           </GridTile>
         </div>
