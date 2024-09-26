@@ -32,31 +32,35 @@ function BentoGrid() {
       <h2 className="hidden">About me</h2>
       <div className="flex justify-center">
         <div className="grid grid-cols-8 gird-rows-6 gap-4 w-[80vw]">
-          <GridTile className="col-span-4 row-span-2 col-start-3 row-start-3 p-10 flex flex-col justify-between">
+          <GridTile className="col-span-4 row-span-2 col-start-3 row-start-3 p-10 flex flex-col justify-between bg-gradient-to-bl">
             <div>
               <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
               </p>
-              <h3 className="font-extrabold text-7xl">Benjamin Schäfer</h3>
+              <h3 className="text-7xl ">
+                Benjamin Schäfer
+              </h3>
             </div>
             <div className="flex justify-between">
-              <p className="font-bold text-4xl self-center">I make Websites.</p>
-              <div className="bg-green-500 w-fit h-fit py-2 px-3 rounded-full self-center">
-                <FontAwesomeIcon icon={faUserPlus} />
-                <span className="pl-2">Let's connect</span>
+              <p className="font-bold text-4xl self-center text-slate-500">I make Websites.</p>
+              <div className="bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center">
+                <div className="bg-slate-200 rounded-full py-2 px-4">
+                  <FontAwesomeIcon icon={faUserPlus} />
+                  <span className="pl-2">Let's connect</span>
+                </div>
               </div>
             </div>
           </GridTile>
-          <GridTile className="col-span-4 row-span-2 col-start-5 row-start-1 flex items-center justify-center">
-            <div className="grid grid-cols-4 gap-y-2 justify-items-center">
-              <BrandIcon icon={SiDjango} name="Django" />
-              <BrandIcon icon={SiReact} name="React" />
-              <BrandIcon icon={SiTailwindcss} name="Tailwind" />
-              <BrandIcon icon={SiBootstrap} name="Bootstrap" />
-              <BrandIcon icon={SiJquery} name="jQuery" />
-              <BrandIcon icon={SiGit} name="Git" />
-              <BrandIcon icon={SiHeroku} name="Heroku" />
-              <BrandIcon icon={SiStripe} name="Stripe" />
+          <GridTile title="Tools I use" className="col-span-4 row-span-2 col-start-5 row-start-1 flex items-center justify-center">
+            <div className="grid grid-cols-4 gap-y-2 w-full">
+              <BrandIcon icon={SiDjango} name="Django" color="#60a5fa" />
+              <BrandIcon icon={SiReact} name="React" color="#60a5fa" />
+              <BrandIcon icon={SiTailwindcss} name="Tailwind" color="#60a5fa" />
+              <BrandIcon icon={SiBootstrap} name="Bootstrap" color="#60a5fa" />
+              <BrandIcon icon={SiJquery} name="jQuery" color="#60a5fa" />
+              <BrandIcon icon={SiGit} name="Git" color="#60a5fa" />
+              <BrandIcon icon={SiHeroku} name="Heroku" color="#60a5fa" />
+              <BrandIcon icon={SiStripe} name="Stripe" color="#60a5fa" />
             </div>
           </GridTile>
           <GridTile className="row-span-2 col-start-7 row-start-3 col-span-2 bg-emerald-400 flex justify-center items-center">
@@ -71,12 +75,12 @@ function BentoGrid() {
                 alt="CV Thumbnail"
                 className="w-2/3 object-scale-down"
               />
-              <div className="bg-green-500 w-fit px-3 py-2 rounded-full">
+              <div className="bg-slate-200 rounded-full py-2 px-4">
                 get my CV
               </div>
             </a>
           </GridTile>
-          <GridTile className="col-span-2 row-span-3 col-start-1 row-start-4 p-4 bg-white shadow-lg rounded-lg">
+          <GridTile title="My Diplomas" className="col-span-2 row-span-3 col-start-1 row-start-4 p-4 bg-white shadow-lg rounded-lg">
             <div className="flex flex-col items-center space-y-4">
               <CodeInstituteLogo className="h-10 mx-auto" />
               <div className="text-center">
@@ -121,8 +125,8 @@ function BentoGrid() {
               className="rounded-3xl w-full h-full object-cover"
             />
           </GridTile>
-          <GridTile className="row-span-2 col-span-2 col-start-3 row-start-1 flex items-center justify-center">
-            <div className="grid grid-cols-2 gap-y-2 justify-items-center">
+          <GridTile title="Languages I know" className="row-span-2 col-span-2 col-start-3 row-start-1 flex items-center justify-center">
+            <div className="grid grid-cols-2 gap-y-2 w-full">
               <BrandIcon icon={SiHtml5} name="HTML5" />
               <BrandIcon icon={SiJavascript} name="JavaScript" />
               <BrandIcon icon={SiCss3} name="CSS3" />
@@ -140,7 +144,12 @@ function BentoGrid() {
               aria-label="LinkedIn Profile"
               className="flex items-center"
             >
-              <BrandIcon icon={SiLinkedin} name={SiLinkedinHex} link="https://www.linkedin.com/in/beni-schaefer/" />
+              <BrandIcon
+                icon={SiLinkedin}
+                color="default"
+                name="connect"
+                link="https://www.linkedin.com/in/beni-schaefer/"
+              />
             </a>
           </GridTile>
           <GridTile
@@ -154,7 +163,13 @@ function BentoGrid() {
               aria-label="GitHub Profile"
               className="flex items-center"
             >
-              <BrandIcon icon={SiGithub} name="benschaf" link="https://github.com/benschaf" className="invert-icon" />
+              <BrandIcon
+                icon={SiGithub}
+                name="benschaf"
+                color="default"
+                link="https://github.com/benschaf"
+                className="invert-icon"
+              />
             </a>
           </GridTile>
         </div>
