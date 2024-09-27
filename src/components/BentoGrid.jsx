@@ -53,14 +53,14 @@ function BentoGrid() {
           </GridTile>
           <GridTile title="Tools I use" className="col-span-4 row-span-2 col-start-5 row-start-1 flex items-center justify-center">
             <div className="grid grid-cols-4 gap-y-2 w-full">
-              <BrandIcon icon={SiDjango} name="Django" color="#60a5fa" />
-              <BrandIcon icon={SiReact} name="React" color="#60a5fa" />
-              <BrandIcon icon={SiTailwindcss} name="Tailwind" color="#60a5fa" />
-              <BrandIcon icon={SiBootstrap} name="Bootstrap" color="#60a5fa" />
-              <BrandIcon icon={SiJquery} name="jQuery" color="#60a5fa" />
-              <BrandIcon icon={SiGit} name="Git" color="#60a5fa" />
-              <BrandIcon icon={SiHeroku} name="Heroku" color="#60a5fa" />
-              <BrandIcon icon={SiStripe} name="Stripe" color="#60a5fa" />
+              <BrandIcon icon={SiDjango} name="Django" color="#f97316" />
+              <BrandIcon icon={SiReact} name="React" color="#f97316" />
+              <BrandIcon icon={SiTailwindcss} name="Tailwind" color="#f97316" />
+              <BrandIcon icon={SiBootstrap} name="Bootstrap" color="#f97316" />
+              <BrandIcon icon={SiJquery} name="jQuery" color="#f97316" />
+              <BrandIcon icon={SiGit} name="Git" color="#f97316" />
+              <BrandIcon icon={SiHeroku} name="Heroku" color="#f97316" />
+              <BrandIcon icon={SiStripe} name="Stripe" color="#f97316" />
             </div>
           </GridTile>
           <GridTile className="row-span-2 col-start-7 row-start-3 col-span-2 bg-emerald-400 flex justify-center items-center">
