@@ -1,12 +1,12 @@
 import React from "react";
 
-function GridTile({ className, children, noPadding, title }) {
-  const padding = noPadding ? "" : "p-5";
+function GridTile({ className, children, title, innerClassName }) {
   return (
     <div
-      className={`bg-white rounded-3xl ${padding} drop-shadow-lg ${className}`}
+      className={`${className} bg-white rounded-3xl p-5 drop-shadow-lg`}
     >
-      {children}
+      <h3 className="text-slate-600">{title}</h3>
+      <div className={`w-full h-full ${innerClassName}`}>{children}</div>
     </div>
   );
 }
