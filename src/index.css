@@ -5,13 +5,20 @@
 @tailwind utilities;
 
 
-body {
-  font-family: 'Lato', sans-serif;
-  @apply bg-slate-200;
-}
+@layer base {
+  body {
+    font-family: 'Lato', sans-serif;
+    @apply bg-slate-200;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
 }

@@ -63,7 +63,7 @@ function BentoGrid() {
               <BrandIcon icon={SiStripe} name="Stripe" color="#f97316" />
             </div>
           </GridTile>
-          <GridTile className="row-span-2 col-start-7 row-start-3 col-span-2 bg-emerald-400 flex justify-center items-center">
+          <GridTile className="row-span-2 col-start-7 row-start-3 col-span-2 flex justify-center items-center">
             <a
               href="https://1drv.ms/b/s!AiW3_9fEY4hWie0M5GfzPjSbVOYMiA?e=uGcNuN"
               target="_blank"
@@ -73,7 +73,7 @@ function BentoGrid() {
               <img
                 src="/cv_thumbnail.png"
                 alt="CV Thumbnail"
-                className="w-2/3 object-scale-down"
+                className="w-2/3 object-scale-down [filter:drop-shadow(0_0_1.75rem_rgba(0,_0,_0,_0.2))]"
               />
               <div className="bg-slate-200 rounded-full py-2 px-4">
                 get my CV

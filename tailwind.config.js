@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      filter: {
+        "custom-drop-shadow": "drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1))",
+      },
       colors: {
         "brand-teal": "#264653ff",
         "brand-blue": "#2a9d8fff",
