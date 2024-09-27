@@ -13,7 +13,7 @@ function App() {
     <>
       <Header>
         <NavBar />
-        <LanguagePicker />
+        {/* <LanguagePicker /> */}
         <ColorThemeSwitch />
       </Header>
       <main>

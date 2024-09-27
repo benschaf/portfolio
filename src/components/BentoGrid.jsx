@@ -73,7 +73,12 @@ function BentoGrid() {
           >
             <div className="grid grid-cols-4 gap-y-2 w-full">
               {tools.map((tool) => (
-                <BrandIcon key={tool.name} icon={tool.icon} name={tool.name} color="#f97316" />
+                <BrandIcon
+                  key={tool.name}
+                  icon={tool.icon}
+                  name={tool.name}
+                  color="#f97316"
+                />
               ))}
             </div>
           </GridTile>
@@ -146,7 +151,11 @@ function BentoGrid() {
           >
             <div className="grid grid-cols-2 gap-y-2 w-full">
               {languages.map((language) => (
-                <BrandIcon key={language.name} icon={language.icon} name={language.name} />
+                <BrandIcon
+                  key={language.name}
+                  icon={language.icon}
+                  name={language.name}
+                />
               ))}
             </div>
           </GridTile>
@@ -169,9 +178,7 @@ function BentoGrid() {
               />
             </a>
           </GridTile>
-          <GridTile
-            className="col-start-2 row-start-1 flex justify-center bg-[#181717] !p-0"
-          >
+          <GridTile className="col-start-2 row-start-1 flex justify-center bg-[#181717] !p-0">
             <a
               href="https://github.com/benschaf"
               rel="noopener noreferrer"
