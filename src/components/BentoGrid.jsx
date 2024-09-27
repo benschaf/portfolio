@@ -19,25 +19,40 @@ import {
   SiPython,
   SiStripe,
   SiLinkedin,
-  SiLinkedinHex,
   SiGithub,
-  SiCodeigniter,
-  SiGithubHex,
 } from "@icons-pack/react-simple-icons";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+
+const tools = [
+  { icon: SiDjango, name: "Django" },
+  { icon: SiReact, name: "React" },
+  { icon: SiTailwindcss, name: "Tailwind" },
+  { icon: SiBootstrap, name: "Bootstrap" },
+  { icon: SiJquery, name: "jQuery" },
+  { icon: SiGit, name: "Git" },
+  { icon: SiHeroku, name: "Heroku" },
+  { icon: SiStripe, name: "Stripe" },
+];
+
+const languages = [
+  { icon: SiHtml5, name: "HTML5" },
+  { icon: SiJavascript, name: "JavaScript" },
+  { icon: SiCss3, name: "CSS3" },
+  { icon: SiPython, name: "Python" },
+];
 
 function BentoGrid() {
   return (
     <section>
       <h2 className="hidden">About me</h2>
       <div className="flex justify-center">
-        <div className="grid grid-cols-8 gird-rows-6 gap-4 w-[80vw]">
+        <div className="grid grid-cols-8 gap-4 w-[80vw]">
           <GridTile className="col-span-4 row-span-2 col-start-3 row-start-3 p-10 flex flex-col justify-between bg-gradient-to-bl">
             <div>
               <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
               </p>
-              <h3 className="text-7xl ">Benjamin Schäfer</h3>
+              <h3 className="text-7xl">Benjamin Schäfer</h3>
             </div>
             <div className="flex justify-between">
               <p className="font-bold text-4xl self-center text-slate-500">
@@ -57,14 +72,9 @@ function BentoGrid() {
             innerClassName="flex items-center justify-center"
           >
             <div className="grid grid-cols-4 gap-y-2 w-full">
-              <BrandIcon icon={SiDjango} name="Django" color="#f97316" />
-              <BrandIcon icon={SiReact} name="React" color="#f97316" />
-              <BrandIcon icon={SiTailwindcss} name="Tailwind" color="#f97316" />
-              <BrandIcon icon={SiBootstrap} name="Bootstrap" color="#f97316" />
-              <BrandIcon icon={SiJquery} name="jQuery" color="#f97316" />
-              <BrandIcon icon={SiGit} name="Git" color="#f97316" />
-              <BrandIcon icon={SiHeroku} name="Heroku" color="#f97316" />
-              <BrandIcon icon={SiStripe} name="Stripe" color="#f97316" />
+              {tools.map((tool) => (
+                <BrandIcon key={tool.name} icon={tool.icon} name={tool.name} color="#f97316" />
+              ))}
             </div>
           </GridTile>
           <GridTile className="row-span-2 col-start-7 row-start-3 col-span-2 flex justify-center items-center">
@@ -84,9 +94,7 @@ function BentoGrid() {
               </div>
             </a>
           </GridTile>
-          <GridTile
-            className="col-span-2 row-span-1 col-start-1 row-start-4"
-          >
+          <GridTile className="col-span-2 row-span-1 col-start-1 row-start-4">
             <div className="flex flex-col space-y-4">
               <div>
                 <p className="font-semibold">
@@ -97,13 +105,11 @@ function BentoGrid() {
               <CodeInstituteLogo className="h-10 mx-auto" />
             </div>
           </GridTile>
-          <GridTile
-            className="col-span-2 row-span-2 col-start-1 row-start-5"
-          >
+          <GridTile className="col-span-2 row-span-2 col-start-1 row-start-5">
             <div className="flex flex-col space-y-4">
-                <p className="font-semibold">
-                  Diploma: Master of Arts and Education
-                </p>
+              <p className="font-semibold">
+                Diploma: Master of Arts and Education
+              </p>
               <PHTGLogo className="h-10 mx-auto" />
             </div>
           </GridTile>
@@ -113,9 +119,9 @@ function BentoGrid() {
               width="100%"
               height="100%"
               className="border-0 rounded-3xl"
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </GridTile>
           <GridTile
@@ -130,6 +136,7 @@ function BentoGrid() {
               src="/headshot.png"
               alt="Headshot"
               className="rounded-3xl w-full h-full object-cover"
+              loading="lazy"
             />
           </GridTile>
           <GridTile
@@ -138,15 +145,14 @@ function BentoGrid() {
             innerClassName="flex items-center justify-center"
           >
             <div className="grid grid-cols-2 gap-y-2 w-full">
-              <BrandIcon icon={SiHtml5} name="HTML5" />
-              <BrandIcon icon={SiJavascript} name="JavaScript" />
-              <BrandIcon icon={SiCss3} name="CSS3" />
-              <BrandIcon icon={SiPython} name="Python" />
+              {languages.map((language) => (
+                <BrandIcon key={language.name} icon={language.icon} name={language.name} />
+              ))}
             </div>
           </GridTile>
           <GridTile
-            className={`col-start-1 row-start-1 !p-0`}
-            innerClassName={`flex justify-center align-center`}
+            className="col-start-1 row-start-1 !p-0"
+            innerClassName="flex justify-center align-center"
           >
             <a
               href="https://www.linkedin.com/in/beni-schaefer/"
@@ -164,7 +170,7 @@ function BentoGrid() {
             </a>
           </GridTile>
           <GridTile
-            className={`col-start-2 row-start-1 flex justify-center bg-[#181717] !p-0`}
+            className="col-start-2 row-start-1 flex justify-center bg-[#181717] !p-0"
           >
             <a
               href="https://github.com/benschaf"
