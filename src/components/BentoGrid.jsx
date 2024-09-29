@@ -47,7 +47,7 @@ function BentoGrid() {
       <h2 className="hidden">About me</h2>
       <div className="flex justify-center">
         <div className="grid grid-cols-8 gap-4 w-[80vw]">
-          <GridTile className="col-span-4 row-span-2 col-start-3 row-start-3 p-10 flex flex-col justify-between bg-gradient-to-bl">
+          <GridTile className="col-span-4 row-span-2 col-start-3 row-start-3 p-10" innerClassName="flex flex-col justify-between">
             <div>
               <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
