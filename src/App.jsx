@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from './components/Header'
 import NavBar from './components/NavBar';
 import LanguagePicker from './components/LanguagePicker';
@@ -7,6 +8,7 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
 import HeroSection from './components/HeroSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,9 +24,9 @@ function App() {
         <Projects />
         <Testimonials />
       </main>
-      <footer>
+      <Footer>
         <ContactForm />
-      </footer>
+      </Footer>
     </>
   );
 }

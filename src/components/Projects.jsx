@@ -1,4 +1,7 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
+import Project from "./Project";
+import gipfelTutorMockup from "../assets/project-gipfel-tutor-mockup.png";
 import {
   SiDjango,
   SiReact,
@@ -13,6 +16,8 @@ import {
   SiPython,
   SiStripe,
   SiCalendly,
+  SiAmazonwebservices,
+  SiGooglecloud,
 } from "@icons-pack/react-simple-icons";
 
 function Projects() {
@@ -82,67 +87,73 @@ function Projects() {
       name: "Calendly Api2",
       icon: SiCalendly,
     },
+    {
+      id: 14,
+      name: "Google Cloud",
+      icon: SiGooglecloud,
+    },
+    {
+      id: 15,
+      name: "Amazon Web Services",
+      icon: SiAmazonwebservices,
+    },
   ];
 
   const projects = [
     {
       id: 1,
       name: "Gipfel Tutor",
-      description: "A platform to connect students with tutors",
-      longDescription: `Welcome to Gipfel Tutor, the pinnacle of personalized tutoring! Our Django-powered marketplace pairs you with the perfect tutor to conquer your academic peaks. Quick, simple, and effective — scale new heights in learning with us!
+      description: "An online Marketplace to connect students with tutors and collect payments.",
+      longDescription: `
+  This is my latest project, Gipfel Tutor. It is a Learning Platform that connects students with tutors.
 
-          Our Mission: "Connect learners with a highly suitable tutor for their specific needs and preferences, within 48 hours."
+  Top Technical Features:
+  - **Credit Card Payments using Stripe**: Securely pay for lessons online - Google Pay included. Powered by Stripe API and Stripe Webhooks.
+  - **Calendly Integration**: Schedule and cancel lessons seamlessly from the site. Powered by the Calendly API v2.
+  - **Socialaccount Login**: Sign in with Google for a passwordless and modern experience.
 
-          Top Technical Features:
-          - **Credit Card Payments using Stripe**: Securely pay for lessons online - Google Pay included. Powered by Stripe API and Stripe Webhooks.
-          - **Calendly Integration**: Schedule and cancel lessons seamlessly from the site. Powered by the Calendly API v2.
-          - **Socialaccount Login**: Sign in with Google for a passwordless and modern experience.
-
-          Key User Stories:
-          - **First Time Visitors**: Understand the purpose of the site and decide to sign up.
-          - **Students**: View a list of tutors, filter and sort based on preferences, and book lessons.
-          - **Users**: Create accounts, log in/out, reset passwords, and receive confirmation emails.
-          - **Students and Tutors**: Manage booking history, upcoming lessons, payment details, and profiles.
-          - **Admin**: Manage tutors and user accounts, ensuring platform security.
-          - **Site Owner**: Employ SEO techniques, maintain a Facebook Business Page, and provide a Newsletter.
-
-          Gipfel Tutor is designed to make finding and booking the right tutor as easy and efficient as possible, ensuring a seamless experience for both students and tutors.`,
+  Key User Stories:
+  - **Students**: View a list of tutors, filter and sort based on preferences, and book lessons.
+  - **Users**: Create accounts, log in/out, reset passwords, and receive confirmation emails.
+  - **Students and Tutors**: Manage booking history, upcoming lessons, payment details, and profiles.
+  - **Admin**: Manage tutors and user accounts, ensuring platform security.
+  - **Site Owner**: Employ SEO techniques, maintain a Facebook Business Page, and provide a Newsletter.`,
       websiteUrl: "https://gipfel-tutor-768a610dc54f.herokuapp.com/",
+      githubUrl: "https://github.com/benschaf/gipfel-tutor",
       techStack: techStack.filter(
         (tech) =>
           tech.name === "Django" ||
           tech.name === "Bootstrap" ||
-          tech.name === "Python" ||
           tech.name === "Stripe" ||
           tech.name === "Heroku" ||
           tech.name === "jQuery" ||
           tech.name === "Calendly Api2" ||
           tech.name === "Git" ||
-          tech.name === "HTML5" ||
-          tech.name === "CSS3" ||
-          tech.name === "JavaScript"
+          tech.name === "Google Cloud" ||
+          tech.name === "Amazon Web Services"
       ),
+      image: gipfelTutorMockup,
+      topFeatures: [
+        {
+          id: 1,
+          name: "**Credit Card Payments** powered by Stripe",
+        },
+        {
+          id: 2,
+          name: "**Calendly Integration** using Calendly API v2",
+        },
+        {
+          id: 3,
+          name: "**Google Sign-In** for a passwordless experience",
+        },
+      ],
     },
   ];
 
   return (
     <section>
       {projects.map((project) => (
-        <div key={project.id}>
-          <h2>{project.name}</h2>
-          <p>{project.description}</p>
-          <p>{project.longDescription}</p>
-          <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
-            Visit Website
-          </a>
-          <ul>
-            {project.techStack.map((tech) => (
-              <li key={tech.id}>
-                <tech.icon /> {tech.name}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Project project={project}></Project>
       ))}
     </section>
   );
