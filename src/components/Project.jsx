@@ -1,5 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import BrandIcon from "./BrandIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -18,6 +19,11 @@ function Project({ project }) {
       <p className="font-semibold text-slate-800 max-w-md">
         {project.description}
       </p>
+          <img
+            src={project.image}
+            alt={`Mockup of the ${project.name} project.`}
+            className="md:hidden rounded-3xl"
+          />
       <div className="md:flex gap-10">
         <div>
           <div className="bg-white rounded-3xl p-4 w-full my-4 shadow-lg">
@@ -37,27 +43,26 @@ function Project({ project }) {
             <h3 className="text-slate-600 mb-3">Tech Stack</h3>
             <ul className="flex gap-5 flex-wrap">
               {project.techStack.map((tech) => (
-                <li key={tech.id} className="flex">
-                  <tech.icon color="default" />{" "}
-                  <span className="ml-2">{tech.name}</span>
+                <li key={tech.id}>
+                    <BrandIcon small={true} icon={tech.icon} name={tech.name} color="default"></BrandIcon>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="max-w-[40vw] flex flex-col justify-between p-4">
+        <div className="md:max-w-[40vw] flex flex-col justify-between p-4">
           <img
             src={project.image}
             alt={`Mockup of the ${project.name} project.`}
-            className="rounded-3xl"
+            className="hidden md:block rounded-3xl"
           />
-          <div>
-            <div className="flex justify-end gap-4">
+          <div className="mx-auto md:mx-0">
+            <div className="flex flex-col md:flex-row justify-end gap-4">
               <a
                 href={project.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-slate-600 rounded-full py-2 px-4 hover:bg-slate-300 transition-colors duration-300"
+                className="border border-slate-600 rounded-full max-w-48 md:w-fit py-2 px-4 hover:bg-slate-300 transition-colors duration-300"
               >
                 Visit live Website
                 <FontAwesomeIcon
@@ -69,7 +74,7 @@ function Project({ project }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-slate-600 rounded-full py-2 px-4 hover:bg-slate-300 transition-colors duration-300"
+                className="border border-slate-600 rounded-full w-48 md:w-fit py-2 px-4 hover:bg-slate-300 transition-colors duration-300"
               >
                 Go to GitHub Repository
                 <FontAwesomeIcon
@@ -78,7 +83,7 @@ function Project({ project }) {
                 ></FontAwesomeIcon>
               </a>
             </div>
-            <div className="bg-orange-400 rounded-full py-2 px-4 mt-4 block w-fit ml-auto text-center hover:bg-orange-300 transition-colors duration-300">
+            <div className="bg-orange-400 rounded-full py-2 px-4 mt-4 block w-48 md:w-fit md:ml-auto text-center hover:bg-orange-300 transition-colors duration-300">
               See More
               <FontAwesomeIcon
                 className="ml-3"
