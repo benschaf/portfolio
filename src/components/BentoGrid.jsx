@@ -46,19 +46,19 @@ function BentoGrid() {
     <section>
       <h2 className="hidden">About me</h2>
       <div className="flex justify-center">
-        <div className="grid grid-cols-8 gap-4 w-[80vw]">
-          <GridTile className="col-span-4 row-span-2 col-start-3 row-start-3 p-10" innerClassName="flex flex-col justify-between">
+        <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-8 gap-4 w-[80vw]">
+          <GridTile className="bg-transparent md:bg-white  col-span-2 row-span-2 col-start-1 row-start-1 lg:col-span-4 lg:row-span-2 lg:col-start-3 lg:row-start-3 lg:p-10" innerClassName="flex flex-col justify-between">
             <div>
               <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
               </p>
-              <h3 className="text-7xl">Benjamin Schäfer</h3>
+              <h3 className="text-5xl md:text-7xl">Benjamin Schäfer</h3>
             </div>
-            <div className="flex justify-between">
-              <p className="font-bold text-4xl self-center text-slate-500">
+            <div className="md:flex justify-between">
+              <p className="font-bold text-3xl lg:text-4xl self-center text-slate-500">
                 I make Websites.
               </p>
-              <div className="bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center">
+              <div className="mt-10 md:mt-0 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center">
                 <div className="bg-slate-200 rounded-full py-2 px-4">
                   <FontAwesomeIcon icon={faUserPlus} />
                   <span className="pl-2">Let's connect</span>
@@ -66,77 +66,7 @@ function BentoGrid() {
               </div>
             </div>
           </GridTile>
-          <GridTile
-            title="Tools I use"
-            className="col-span-4 row-span-2 col-start-5 row-start-1"
-            innerClassName="flex items-center justify-center"
-          >
-            <div className="grid grid-cols-4 gap-y-2 w-full">
-              {tools.map((tool) => (
-                <BrandIcon
-                  key={tool.name}
-                  icon={tool.icon}
-                  name={tool.name}
-                  color="#f97316"
-                />
-              ))}
-            </div>
-          </GridTile>
-          <GridTile className="row-span-2 col-start-7 row-start-3 col-span-2 flex justify-center items-center">
-            <a
-              href="https://1drv.ms/b/s!AiW3_9fEY4hWie0M5GfzPjSbVOYMiA?e=uGcNuN"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center justify-between"
-            >
-              <img
-                src="/cv_thumbnail.png"
-                alt="CV Thumbnail"
-                className="w-2/3 object-scale-down [filter:drop-shadow(0_0_1.75rem_rgba(0,_0,_0,_0.2))]"
-              />
-              <div className="bg-slate-200 rounded-full py-2 px-4">
-                get my CV
-              </div>
-            </a>
-          </GridTile>
-          <GridTile className="col-span-2 row-span-1 col-start-1 row-start-4">
-            <div className="flex flex-col space-y-4">
-              <div>
-                <p className="font-semibold">
-                  Diploma: Fullstack Web Development
-                </p>
-                <p className="text-sm text-gray-600">Grade: Distinction</p>
-              </div>
-              <CodeInstituteLogo className="h-10 mx-auto" />
-            </div>
-          </GridTile>
-          <GridTile className="col-span-2 row-span-2 col-start-1 row-start-5">
-            <div className="flex flex-col space-y-4">
-              <p className="font-semibold">
-                Diploma: Master of Arts and Education
-              </p>
-              <PHTGLogo className="h-10 mx-auto" />
-            </div>
-          </GridTile>
-          <GridTile className="col-span-2 row-span-2 col-start-3 row-start-5 !p-0">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88424.03638441453!2d10.893116525075726!3d50.26030977205642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a3ce1441f48837%3A0x41db728f061d9a0!2s96450%20Coburg!5e1!3m2!1sde!2sde!4v1727172427223!5m2!1sde!2sde"
-              width="100%"
-              height="100%"
-              className="border-0 rounded-3xl"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </GridTile>
-          <GridTile
-            className="col-span-4 row-span-2 col-start-5 row-start-5"
-            title="My Github Activity"
-            innerClassName="flex justify-center"
-          >
-            <MyGithubCalendar />
-          </GridTile>
-          <GridTile className="col-span-2 row-span-2 col-start-1 row-start-2 !p-0">
+          <GridTile className="col-span-2 lg:row-span-2 lg:col-start-1 lg:row-start-3 !p-0">
             <img
               src="/headshot.png"
               alt="Headshot"
@@ -146,7 +76,7 @@ function BentoGrid() {
           </GridTile>
           <GridTile
             title="Languages I know"
-            className="row-span-2 col-span-2 col-start-3 row-start-1"
+            className="col-span-2 lg:row-span-2 lg:col-span-2 lg:col-start-3 lg:row-start-1"
             innerClassName="flex items-center justify-center"
           >
             <div className="grid grid-cols-2 gap-y-2 w-full">
@@ -160,7 +90,60 @@ function BentoGrid() {
             </div>
           </GridTile>
           <GridTile
-            className="col-start-1 row-start-1 !p-0"
+            title="Tools I use"
+            className="col-span-2 lg:col-span-4 lg:row-span-2 lg:col-start-5 lg:row-start-1"
+            innerClassName="flex items-center justify-center"
+          >
+            <div className="grid grid-cols-3 md:grid-cols-4 gap-y-2 w-full">
+              {tools.map((tool) => (
+                <BrandIcon
+                  key={tool.name}
+                  icon={tool.icon}
+                  name={tool.name}
+                  color="#f97316"
+                />
+              ))}
+            </div>
+          </GridTile>
+          <GridTile className="col-span-2 lg:col-span-2 lg:row-span-1 lg:col-start-1 lg:row-start-4">
+            <div className="flex flex-col space-y-4">
+              <div>
+                <p className="font-semibold">
+                  Diploma: Fullstack Web Development
+                </p>
+                <p className="text-sm text-gray-600">Grade: Distinction</p>
+              </div>
+              <CodeInstituteLogo className="h-10 mx-auto" />
+            </div>
+          </GridTile>
+          <GridTile className="col-span-2 lg:col-span-2 lg:row-span-2 lg:col-start-1 lg:row-start-5">
+            <div className="flex flex-col space-y-4">
+              <p className="font-semibold">
+                Diploma: Master of Arts and Education
+              </p>
+              <PHTGLogo className="h-10 mx-auto" />
+            </div>
+          </GridTile>
+          <GridTile className="hidden md:block lg:col-span-2 lg:row-span-2 lg:col-start-3 lg:row-start-5 !p-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88424.03638441453!2d10.893116525075726!3d50.26030977205642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a3ce1441f48837%3A0x41db728f061d9a0!2s96450%20Coburg!5e1!3m2!1sde!2sde!4v1727172427223!5m2!1sde!2sde"
+              width="100%"
+              height="100%"
+              className="border-0 rounded-3xl"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </GridTile>
+          <GridTile
+            className="hidden md:block lg:col-span-4 lg:row-span-2 lg:col-start-5 lg:row-start-5"
+            title="My Github Activity"
+            innerClassName="flex justify-center"
+          >
+            <MyGithubCalendar />
+          </GridTile>
+          <GridTile
+            className="lg:col-start-1 lg:row-start-1 !p-0"
             innerClassName="flex justify-center align-center"
           >
             <a
@@ -178,7 +161,24 @@ function BentoGrid() {
               />
             </a>
           </GridTile>
-          <GridTile className="col-start-2 row-start-1 flex justify-center bg-[#181717] !p-0">
+          <GridTile className="px-1 row-span-2 lg:row-span-2 lg:col-start-7 lg:row-start-3 lg:col-span-2 md:flex justify-center items-center">
+            <a
+              href="https://1drv.ms/b/s!AiW3_9fEY4hWie0M5GfzPjSbVOYMiA?e=uGcNuN"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-between"
+            >
+              <img
+                src="/cv_thumbnail.png"
+                alt="CV Thumbnail"
+                className="w-2/3 object-scale-down [filter:drop-shadow(0_0_1.75rem_rgba(0,_0,_0,_0.2))]"
+              />
+              <div className="bg-slate-200 rounded-full py-2 px-3">
+                get my CV
+              </div>
+            </a>
+          </GridTile>
+          <GridTile className="lg:col-start-2 lg:row-start-1 md:flex justify-center bg-[#181717] !p-0">
             <a
               href="https://github.com/benschaf"
               rel="noopener noreferrer"

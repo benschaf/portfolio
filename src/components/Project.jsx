@@ -13,11 +13,12 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 function Project({ project }) {
   return (
     <div key={project.id} className="w-[80vw] mx-auto mt-16">
+      <p className="font-bold text-slate-700">Portfolio Project</p>
       <h2 className="text-3xl">{project.name}</h2>
       <p className="font-semibold text-slate-800 max-w-md">
         {project.description}
       </p>
-      <div className="flex gap-10">
+      <div className="md:flex gap-10">
         <div>
           <div className="bg-white rounded-3xl p-4 w-full my-4 shadow-lg">
             <h3 className="text-slate-600 mb-3">Top Technical Features</h3>
