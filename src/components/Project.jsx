@@ -18,7 +18,7 @@ function Project({ project }) {
   };
 
   return (
-    <div key={project.id} className="mx-3 mt-8 lg:mx-auto">
+    <div key={project.id} className="mt-8 lg:mx-auto">
       <div className="relative">
         <div className="z-30 sticky md:static top-0 bg-slate-200/50 backdrop-blur-lg">
           <p className="font-bold text-slate-700">Portfolio Project</p>

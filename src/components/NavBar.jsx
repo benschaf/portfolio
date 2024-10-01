@@ -12,7 +12,7 @@ const NavBar = () => {
     {
       id: 1,
       name: "Home",
-      href: "#home",
+      href: "#",
       icon: faHome,
     },
     {

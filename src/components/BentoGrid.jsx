@@ -69,10 +69,12 @@ function BentoGrid() {
               <p className="font-bold text-4xl lg:text-4xl self-center text-slate-500">
                 I make Websites.
               </p>
-              <div className="mt-10 md:mt-5 md:ml-auto lg:ml-0 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center">
+              <div className="mt-10 md:mt-5 md:ml-auto lg:ml-0 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center transition-all duration-500 hover:bg-gradient-to-l">
                 <div className="bg-white rounded-full py-2 px-4">
-                  <FontAwesomeIcon icon={faUserPlus} />
-                  <span className="pl-2">Let's connect</span>
+                  <a href="#contact">
+                    <FontAwesomeIcon icon={faUserPlus} />
+                    <span className="pl-2">Let's connect</span>
+                  </a>
                 </div>
               </div>
             </div>

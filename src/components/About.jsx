@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="mt-20">
+    <section className="pt-20" id="about">
       <h2 className="text-3xl">About me</h2>
       <p>
         I am a full-stack developer with a Diploma in Full Stack Software

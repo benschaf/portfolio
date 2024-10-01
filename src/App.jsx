@@ -19,15 +19,15 @@ function App() {
         {/* <LanguagePicker /> */}
         <ColorThemeSwitch />
       </Header>
-      <main className='md:w-[80vw] md:mx-auto'>
+      <main className='mx-4 md:w-[80vw] md:mx-auto max-w-7xl'>
         {/* <HeroSection /> */}
         <BentoGrid />
         <About />
         <Projects />
         <Testimonials />
+        <ContactForm />
       </main>
       <Footer>
-        <ContactForm />
       </Footer>
     </>
   );

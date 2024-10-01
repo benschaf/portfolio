@@ -308,7 +308,7 @@ function Projects() {
   ];
 
   return (
-    <section className="mt-20">
+    <section className="pt-20" id="projects">
       <h2 className="text-4xl">My Portfolio Projects</h2>
       {projects.map((project) => (
           <Project project={project}></Project>
