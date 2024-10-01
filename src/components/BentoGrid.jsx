@@ -55,18 +55,21 @@ function BentoGrid() {
               loading="lazy"
             />
           </GridTile>
-          <GridTile className="md:bg-white  col-span-2 row-span-2 col-start-1 row-start-2 md:col-span-4 md:row-span-2 md:col-start-1 md:row-start-1 md:p-10 top-0" innerClassName="flex flex-col justify-between">
+          <GridTile
+            className="md:bg-white  col-span-2 row-span-2 col-start-1 row-start-2 md:col-span-4 md:row-span-2 md:col-start-1 md:row-start-1 md:p-10 top-0"
+            innerClassName="flex flex-col justify-between"
+          >
             <div>
               <p className="bg-white md:bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
               </p>
               <h3 className="text-5xl md:text-7xl">Benjamin Schäfer</h3>
             </div>
-            <div className="md:flex justify-between">
-              <p className="font-bold text-3xl md:text-4xl self-center text-slate-500">
+            <div className="lg:flex justify-between">
+              <p className="font-bold text-4xl lg:text-4xl self-center text-slate-500">
                 I make Websites.
               </p>
-              <div className="mt-10 md:mt-0 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center">
+              <div className="mt-10 md:mt-5 md:ml-auto lg:ml-0 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center">
                 <div className="bg-white rounded-full py-2 px-4">
                   <FontAwesomeIcon icon={faUserPlus} />
                   <span className="pl-2">Let's connect</span>
@@ -105,18 +108,22 @@ function BentoGrid() {
               ))}
             </div>
           </GridTile>
-          <GridTile title="My Diploma" className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-1 lg:col-start-1 md:row-start-4">
+          <GridTile
+            title="My Diploma"
+            className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-1 lg:col-start-1 md:row-start-4"
+          >
             <div className="flex flex-col space-y-4">
               <div className="text-center">
-                <p className="font-semibold mt-3">
-                  Fullstack Web Development
-                </p>
+                <p className="font-semibold mt-3">Fullstack Web Development</p>
                 <p className="text-sm text-gray-600">Grade: Distinction</p>
               </div>
               <CodeInstituteLogo className="h-10 mx-auto" />
             </div>
           </GridTile>
-          <GridTile title="My Degree" className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-3 lg:col-start-3 md:row-start-4 lg:row-start-5">
+          <GridTile
+            title="My Degree"
+            className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-3 lg:col-start-3 md:row-start-4 lg:row-start-5"
+          >
             <div className="flex flex-col space-y-4">
               <p className="font-semibold mt-3 text-center">
                 Master of Arts and Education
@@ -178,7 +185,10 @@ function BentoGrid() {
               </div>
             </a>
           </GridTile>
-          <GridTile className="md:col-start-6 lg:col-start-8 md:row-start-4 lg:row-start-4 !p-0" innerClassName="flex justify-center align-center">
+          <GridTile
+            className="md:col-start-6 lg:col-start-8 md:row-start-4 lg:row-start-4 !p-0"
+            innerClassName="flex justify-center align-center"
+          >
             <a
               href="https://github.com/benschaf"
               rel="noopener noreferrer"

@@ -20,7 +20,7 @@ function Project({ project }) {
   return (
     <div key={project.id} className="mx-3 mt-8 lg:mx-auto">
       <div className="relative">
-        <div className="z-30 sticky lg:static top-0 p-2 bg-slate-200/50 backdrop-blur-lg -mx-2">
+        <div className="z-30 sticky md:static top-0 bg-slate-200/50 backdrop-blur-lg">
           <p className="font-bold text-slate-700">Portfolio Project</p>
           <h2 className="text-3xl">{project.name}</h2>
         </div>
