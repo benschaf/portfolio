@@ -1,7 +1,8 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import Project from "./Project";
 import gipfelTutorMockup from "../assets/project-gipfel-tutor-mockup.png";
+import tonneMockup from "../assets/project-tonne-mockup.png";
+import kaesekaestchenMockup from "../assets/project-kaesekaestchen-mockup.png";
 import {
   SiDjango,
   SiReact,
@@ -18,6 +19,12 @@ import {
   SiCalendly,
   SiAmazonwebservices,
   SiGooglecloud,
+  SiJest,
+  SiPostgresql,
+  SiCloudinary,
+  SiGithub,
+  SiFigma,
+  SiShieldsdotio,
 } from "@icons-pack/react-simple-icons";
 
 function Projects() {
@@ -97,13 +104,54 @@ function Projects() {
       name: "Amazon Web Services",
       icon: SiAmazonwebservices,
     },
+    {
+      id: 16,
+      name: "Jest",
+      icon: SiJest,
+    },
+    {
+      id: 17,
+      name: "Django Allauth",
+      icon: SiDjango,
+    },
+    {
+      id: 18,
+      name: "PostgreSQL",
+      icon: SiPostgresql,
+    },
+    {
+      id: 19,
+      name: "Cloudinary",
+      icon: SiCloudinary,
+    },
+    {
+      id: 22,
+      name: "GitHub Pages",
+      icon: SiGithub,
+    },
+    {
+      id: 23,
+      name: "GitHub Projects",
+      icon: SiGithub,
+    },
+    {
+      id: 24,
+      name: "Figma",
+      icon: SiFigma,
+    },
+    {
+      id: 25,
+      name: "shields.io",
+      icon: SiShieldsdotio,
+    },
   ];
 
   const projects = [
     {
       id: 1,
       name: "Gipfel Tutor",
-      description: "An online Marketplace to connect students with tutors and collect payments.",
+      description:
+        "A Fullstack online Marketplace to connect students with tutors and collect payments.",
       longDescription: `
   This is my latest project, Gipfel Tutor. It is a Learning Platform that connects students with tutors.
 
@@ -136,15 +184,124 @@ function Projects() {
       topFeatures: [
         {
           id: 1,
-          name: "**Credit Card Payments** powered by Stripe",
+          title: "Credit Card Payments",
+          description:
+            "Powered by Stripe API and Stripe Webhooks, including Google Pay.",
         },
         {
           id: 2,
-          name: "**Calendly Integration** using Calendly API v2",
+          title: "Calendly Integration",
+          description: "Using Calendly API v2 to schedule and cancel lessons.",
         },
         {
           id: 3,
-          name: "**Google Sign-In** for a passwordless experience",
+          title: "Google Sign-In",
+          description:
+            "Sign in with Google for a passwordless and modern experience.",
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "Tonne: Waste Reminders",
+      description:
+        "An online community to share and collect waste management schedules.",
+      longDescription: `
+  The tonne (German for: Waste Bin) project was created to help users manage their waste collection schedules and interact with their local community to improve waste management practices.
+
+  Users can:
+  - **Log in and out** using Django Allauth.
+  - **Subscribe to waste collection schedules** based on their postcode.
+  - **Contribute to the community** by creating and sharing their own highly costumizable schedules.
+  - **Receive real-time reminders** by downloading the schedule to their calendar.
+  - **Upload, rate, and comment** on waste collection schedules.
+  - **View a personalized dashboard** with relevant information.
+        `,
+      websiteUrl: "https://tonne-waste-reminders-a6836f2888b0.herokuapp.com/",
+      githubUrl: "https://benschaf/waste-schedule",
+      techStack: techStack.filter(
+        (tech) =>
+          tech.name === "Django" ||
+          tech.name === "Git" ||
+          tech.name === "Heroku" ||
+          tech.name === "jQuery" ||
+          tech.name === "Google Cloud" ||
+          tech.name === "Bootstrap" ||
+          tech.name === "Jest" ||
+          tech.name === "Django Allauth" ||
+          tech.name === "PostgreSQL" ||
+          tech.name === "Cloudinary"
+      ),
+      image: tonneMockup,
+      topFeatures: [
+        {
+          id: 1,
+          title: "Waste Collection Reminders",
+          description:
+            "Receive real-time reminders for waste collection days based on your postcode right in your Calendar.",
+        },
+        {
+          id: 2,
+          title: "Community Interaction",
+          description:
+            "Upload, rate, and comment on waste collection schedules to help improve accuracy and reliability.",
+        },
+        {
+          id: 3,
+          title: "Dashboard",
+          description:
+            "View a personalized dashboard that provides relevant information on your subscribed schedules.",
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "Käsekästchen",
+      description:
+        "Käsekästchen (German for: dots and boxes) is a web app that allows users to play the game of Käsekästchen online.",
+      longDescription: `
+  Käsekästchen is a practice Project I made to expand my knowledge of JavaScript and object-oriented programming.
+
+  The game is played on a grid of dots, where two players take turns drawing lines between the dots. The goal is to complete a square by drawing the fourth line around it. The player who completes the most squares wins the game.
+
+  Key Features:
+  - **Multi-Device Support**: Play the game on different devices, enjyoing a fully responsive experience.
+  - **Customizable Grid Size**: Select the size of the game grid to customize the game to your liking.
+  - **Opponent AI including Difficulty Levels**: A hand crafted AI that plays against you. Select the difficulty level to adjust the game to your skill level.`,
+      websiteUrl: "https://benschaf.github.io/kaesekaestchen/",
+      githubUrl: "https://github.com/benschaf/kaesekaestchen",
+      techStack: techStack.filter(
+        (tech) =>
+        tech.name === "JavaScript" ||
+        tech.name === "HTML" ||
+        tech.name === "CSS" ||
+        tech.name === "CSS Flexbox" ||
+        tech.name === "CSS Grid" ||
+        tech.name === "Git" ||
+        tech.name === "GitHub Pages" ||
+        tech.name === "GitHub Projects" ||
+        tech.name === "Figma" ||
+        tech.name === "shields.io"
+      ),
+      image: kaesekaestchenMockup,
+      topFeatures: [
+        {
+          id: 2,
+          title: "Multi-Device Support",
+          description:
+            "Play the game on different devices, enjoying a fully responsive experience.",
+        },
+        {
+          id: 3,
+          title: "Customizable Grid Size",
+          description:
+            "Select the size of the grid to customize the game to your liking.",
+        },
+        {
+          id: 7,
+          title: "AI Difficulty Levels",
+          description:
+            "Select the AI difficulty level to adjust the game to your skill level.",
         },
       ],
     },
@@ -153,7 +310,10 @@ function Projects() {
   return (
     <section>
       {projects.map((project) => (
-        <Project project={project}></Project>
+        <>
+          <Project project={project}></Project>
+          <hr className="my-4 border-t-2 border-gray-300" />
+        </>
       ))}
     </section>
   );

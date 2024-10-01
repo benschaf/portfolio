@@ -2,7 +2,7 @@ import React from "react";
 
 function ColorThemeSwitch() {
   return (
-    <div className="absolute end-3">
+    <div className="hidden absolute end-3">
       {/* > Credit for toggle: https://flowbite.com/docs/forms/toggle/ */}
       <label className="flex items-center cursor-pointer relative group">
         <input type="checkbox" value="" className="sr-only peer"></input>

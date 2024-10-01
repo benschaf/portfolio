@@ -43,13 +43,21 @@ const languages = [
 
 function BentoGrid() {
   return (
-    <section>
+    <section className="mt-2 md:mt-0">
       <h2 className="hidden">About me</h2>
       <div className="flex justify-center">
-        <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-8 gap-4 w-[80vw]">
-          <GridTile className="bg-transparent md:bg-white  col-span-2 row-span-2 col-start-1 row-start-1 lg:col-span-4 lg:row-span-2 lg:col-start-3 lg:row-start-3 lg:p-10" innerClassName="flex flex-col justify-between">
+        <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-8 gap-4 mx-2 md:w-[80vw]">
+          <GridTile className="row-start-1 col-span-2 !bg-transparent md:!bg-white lg:row-span-2 lg:col-start-1 lg:row-start-3 !p-0">
+            <img
+              src="/headshot.png"
+              alt="Headshot"
+              className="rounded-full w-1/2 md:w-full h-full object-cover"
+              loading="lazy"
+            />
+          </GridTile>
+          <GridTile className="!bg-transparent md:bg-white  col-span-2 row-span-2 col-start-1 row-start-2 lg:col-span-4 lg:row-span-2 lg:col-start-3 lg:row-start-3 lg:p-10" innerClassName="flex flex-col justify-between">
             <div>
-              <p className="bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
+              <p className="bg-white md:bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
               </p>
               <h3 className="text-5xl md:text-7xl">Benjamin Schäfer</h3>
@@ -59,20 +67,12 @@ function BentoGrid() {
                 I make Websites.
               </p>
               <div className="mt-10 md:mt-0 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center">
-                <div className="bg-slate-200 rounded-full py-2 px-4">
+                <div className="bg-white rounded-full py-2 px-4">
                   <FontAwesomeIcon icon={faUserPlus} />
                   <span className="pl-2">Let's connect</span>
                 </div>
               </div>
             </div>
-          </GridTile>
-          <GridTile className="col-span-2 lg:row-span-2 lg:col-start-1 lg:row-start-3 !p-0">
-            <img
-              src="/headshot.png"
-              alt="Headshot"
-              className="rounded-3xl w-full h-full object-cover"
-              loading="lazy"
-            />
           </GridTile>
           <GridTile
             title="Languages I know"
@@ -105,21 +105,21 @@ function BentoGrid() {
               ))}
             </div>
           </GridTile>
-          <GridTile className="col-span-2 lg:col-span-2 lg:row-span-1 lg:col-start-1 lg:row-start-4">
+          <GridTile title="My Diploma" className="col-span-2 lg:col-span-2 lg:row-span-1 lg:col-start-1 lg:row-start-4">
             <div className="flex flex-col space-y-4">
-              <div>
-                <p className="font-semibold">
-                  Diploma: Fullstack Web Development
+              <div className="text-center">
+                <p className="font-semibold mt-3">
+                  Fullstack Web Development
                 </p>
                 <p className="text-sm text-gray-600">Grade: Distinction</p>
               </div>
               <CodeInstituteLogo className="h-10 mx-auto" />
             </div>
           </GridTile>
-          <GridTile className="col-span-2 lg:col-span-2 lg:row-span-2 lg:col-start-1 lg:row-start-5">
+          <GridTile title="My Degree" className="col-span-2 lg:col-span-2 lg:row-span-2 lg:col-start-1 lg:row-start-5">
             <div className="flex flex-col space-y-4">
-              <p className="font-semibold">
-                Diploma: Master of Arts and Education
+              <p className="font-semibold mt-3 text-center">
+                Master of Arts and Education
               </p>
               <PHTGLogo className="h-10 mx-auto" />
             </div>
@@ -178,7 +178,7 @@ function BentoGrid() {
               </div>
             </a>
           </GridTile>
-          <GridTile className="lg:col-start-2 lg:row-start-1 md:flex justify-center bg-[#181717] !p-0">
+          <GridTile className="lg:col-start-2 lg:row-start-1 !p-0" innerClassName="flex justify-center align-center">
             <a
               href="https://github.com/benschaf"
               rel="noopener noreferrer"
