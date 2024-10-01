@@ -46,8 +46,8 @@ function BentoGrid() {
     <section className="mt-2 md:mt-0">
       <h2 className="hidden">About me</h2>
       <div className="flex justify-center">
-        <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-8 gap-4 mx-2 md:w-[80vw]">
-          <GridTile className="row-start-1 col-span-2 !bg-transparent md:!bg-white lg:row-span-2 lg:col-start-5 lg:row-start-1 !p-0">
+        <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-8 gap-4">
+          <GridTile className="row-start-1 col-span-2 !bg-transparent md:row-span-1 lg:row-span-2 md:!bg-white md:col-start-5 lg:col-start-5 md:row-start-1 !p-0">
             <img
               src="/headshot.png"
               alt="Headshot"
@@ -55,7 +55,7 @@ function BentoGrid() {
               loading="lazy"
             />
           </GridTile>
-          <GridTile className="md:bg-white  col-span-2 row-span-2 col-start-1 row-start-2 lg:col-span-4 lg:row-span-2 lg:col-start-1 lg:row-start-1 lg:p-10 top-0" innerClassName="flex flex-col justify-between">
+          <GridTile className="md:bg-white  col-span-2 row-span-2 col-start-1 row-start-2 md:col-span-4 md:row-span-2 md:col-start-1 md:row-start-1 md:p-10 top-0" innerClassName="flex flex-col justify-between">
             <div>
               <p className="bg-white md:bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
@@ -63,7 +63,7 @@ function BentoGrid() {
               <h3 className="text-5xl md:text-7xl">Benjamin Schäfer</h3>
             </div>
             <div className="md:flex justify-between">
-              <p className="font-bold text-3xl lg:text-4xl self-center text-slate-500">
+              <p className="font-bold text-3xl md:text-4xl self-center text-slate-500">
                 I make Websites.
               </p>
               <div className="mt-10 md:mt-0 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center">
@@ -76,7 +76,7 @@ function BentoGrid() {
           </GridTile>
           <GridTile
             title="Languages I know"
-            className="col-span-2 lg:row-span-2 lg:col-span-2 lg:col-start-1 lg:row-start-3"
+            className="col-span-2 md:row-span-1 lg:row-span-2 md:col-span-2 md:col-start-1 md:row-start-3"
             innerClassName="flex items-center justify-center"
           >
             <div className="grid grid-cols-2 gap-y-2 w-full">
@@ -91,7 +91,7 @@ function BentoGrid() {
           </GridTile>
           <GridTile
             title="Tools I use"
-            className="col-span-2 lg:col-span-4 lg:row-span-2 lg:col-start-3 lg:row-start-3"
+            className="col-span-2 md:col-span-4 md-row-span-1 lg:row-span-2 md:col-start-3 md:row-start-3"
             innerClassName="flex items-center justify-center"
           >
             <div className="grid grid-cols-3 md:grid-cols-4 gap-y-2 w-full">
@@ -105,7 +105,7 @@ function BentoGrid() {
               ))}
             </div>
           </GridTile>
-          <GridTile title="My Diploma" className="col-span-2 lg:col-span-2 lg:row-span-1 lg:col-start-1 lg:row-start-5">
+          <GridTile title="My Diploma" className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-1 lg:col-start-1 md:row-start-4">
             <div className="flex flex-col space-y-4">
               <div className="text-center">
                 <p className="font-semibold mt-3">
@@ -116,7 +116,7 @@ function BentoGrid() {
               <CodeInstituteLogo className="h-10 mx-auto" />
             </div>
           </GridTile>
-          <GridTile title="My Degree" className="col-span-2 lg:col-span-2 lg:row-span-1 lg:col-start-3 lg:row-start-5">
+          <GridTile title="My Degree" className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-3 lg:col-start-3 md:row-start-4 lg:row-start-5">
             <div className="flex flex-col space-y-4">
               <p className="font-semibold mt-3 text-center">
                 Master of Arts and Education
@@ -124,7 +124,7 @@ function BentoGrid() {
               <PHTGLogo className="h-10 mx-auto" />
             </div>
           </GridTile>
-          <GridTile className="hidden md:block lg:col-span-2 lg:row-span-1 lg:col-start-7 lg:row-start-1 !p-0">
+          <GridTile className="hidden md:block md:col-span-2 md:row-span-1 md:col-start-5 lg:col-start-7 md:row-start-2 lg:row-start-1 !p-0">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88424.03638441453!2d10.893116525075726!3d50.26030977205642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a3ce1441f48837%3A0x41db728f061d9a0!2s96450%20Coburg!5e1!3m2!1sde!2sde!4v1727172427223!5m2!1sde!2sde"
               width="100%"
@@ -136,14 +136,14 @@ function BentoGrid() {
             ></iframe>
           </GridTile>
           <GridTile
-            className="hidden md:block lg:col-span-4 lg:row-span-1 lg:col-start-5 lg:row-start-5"
+            className="hidden md:block md:col-span-4 md:row-span-1 md:col-start-1 lg:col-start-5 md:row-start-6 lg:row-start-5"
             title="My Github Activity"
             innerClassName="flex justify-center"
           >
             <MyGithubCalendar />
           </GridTile>
           <GridTile
-            className="lg:col-start-7 lg:row-start-4 !p-0"
+            className="md:col-start-5 lg:col-start-7 md:row-start-4 !p-0"
             innerClassName="flex justify-center align-center"
           >
             <a
@@ -161,7 +161,7 @@ function BentoGrid() {
               />
             </a>
           </GridTile>
-          <GridTile className="px-1 row-span-2 lg:row-span-2 lg:col-start-7 lg:row-start-2 lg:col-span-2 md:flex justify-center items-center">
+          <GridTile className="px-1 row-span-2 md:row-span-2 md:col-start-5 lg:col-start-7 md:row-start-5 lg:row-start-2 md:col-span-2 md:flex justify-center items-center">
             <a
               href="https://1drv.ms/b/s!AiW3_9fEY4hWie0M5GfzPjSbVOYMiA?e=uGcNuN"
               target="_blank"
@@ -178,7 +178,7 @@ function BentoGrid() {
               </div>
             </a>
           </GridTile>
-          <GridTile className="lg:col-start-8 lg:row-start-4 !p-0" innerClassName="flex justify-center align-center">
+          <GridTile className="md:col-start-6 lg:col-start-8 md:row-start-4 lg:row-start-4 !p-0" innerClassName="flex justify-center align-center">
             <a
               href="https://github.com/benschaf"
               rel="noopener noreferrer"

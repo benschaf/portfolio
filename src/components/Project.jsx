@@ -18,13 +18,13 @@ function Project({ project }) {
   };
 
   return (
-    <div key={project.id} className="mx-3 mt-16 md:w-[80vw] md:mx-auto">
+    <div key={project.id} className="mx-3 mt-8 lg:mx-auto">
       <div className="relative">
-        <div className="z-30 sticky top-0 p-2 bg-slate-200/50 lg:bg-gradient-to-r lg:from-slate-200 lg:via-transparent lg:to-transparent backdrop-blur-lg md:backdrop-blur-sm -mx-2">
+        <div className="z-30 sticky lg:static top-0 p-2 bg-slate-200/50 backdrop-blur-lg -mx-2">
           <p className="font-bold text-slate-700">Portfolio Project</p>
           <h2 className="text-3xl">{project.name}</h2>
         </div>
-        <div className="flex gap-28">
+        <div className="flex gap-12">
           <div>
             <ul className="mt-3 flex gap-2 flex-wrap">
               {project.techStack.map((tech) => (
@@ -41,7 +41,7 @@ function Project({ project }) {
             <p className="my-4 font-semibold text-slate-800">
               {project.description}
             </p>
-            <div className="flex md:flex-row gap-4">
+            <div className="flex lg:flex-row gap-4">
               <a
                 href={project.websiteUrl}
                 target="_blank"
@@ -70,11 +70,11 @@ function Project({ project }) {
             <img
               src={project.image}
               alt={`Mockup of the ${project.name} project.`}
-              className="mt-3 md:hidden rounded-3xl"
+              className="mt-3 md:w-2/3 mx-auto lg:hidden"
             />
             <div
               className={`relative ${
-                isExpanded ? "h-fit" : "h-52 md:h-96"
+                isExpanded ? "h-fit" : "h-52 lg:h-96"
               } overflow-hidden bg-white rounded-3xl pt-4 px-4 w-full my-4 shadow-lg`}
             >
               <h3 className="text-slate-600 mb-3">Top Technical Features</h3>
@@ -101,11 +101,11 @@ function Project({ project }) {
               <div className="sticky bottom-0 bg-gradient-to-b from-transparent via-white to-white p-4">
                 <div
                   onClick={handleExpandToggle}
-                  className={`md:mx-0 ${
+                  className={`lg:mx-0 ${
                     isExpanded
                       ? "bg-white border border-slate-700"
                       : "bg-orange-400 hover:bg-orange-300"
-                  } rounded-full py-2 px-4 block mx-auto w-fit md:ml-auto text-center transition-colors duration-300`}
+                  } rounded-full py-2 px-4 block mx-auto w-fit lg:ml-auto text-center transition-colors duration-300`}
                 >
                   {isExpanded ? "See Less" : "See More"}
                   <FontAwesomeIcon
@@ -119,7 +119,7 @@ function Project({ project }) {
           <img
             src={project.image}
             alt={`Mockup of the ${project.name} project.`}
-            className="mt-3 hidden md:block md:w-2/5 md:object-contain md:self-start"
+            className="mt-3 hidden lg:block lg:w-3/6 lg:object-contain lg:self-start"
           />
         </div>
       </div>

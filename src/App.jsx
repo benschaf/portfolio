@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header'
 import NavBar from './components/NavBar';
 import LanguagePicker from './components/LanguagePicker';
+import About from './components/About';
 import ColorThemeSwitch from './components/ColorThemeSwitch';
 import BentoGrid from './components/BentoGrid';
 import Projects from './components/Projects';
@@ -18,9 +19,10 @@ function App() {
         {/* <LanguagePicker /> */}
         <ColorThemeSwitch />
       </Header>
-      <main>
+      <main className='md:w-[80vw] md:mx-auto'>
         {/* <HeroSection /> */}
         <BentoGrid />
+        <About />
         <Projects />
         <Testimonials />
       </main>

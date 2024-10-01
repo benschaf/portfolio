@@ -272,16 +272,16 @@ function Projects() {
       githubUrl: "https://github.com/benschaf/kaesekaestchen",
       techStack: techStack.filter(
         (tech) =>
-        tech.name === "JavaScript" ||
-        tech.name === "HTML" ||
-        tech.name === "CSS" ||
-        tech.name === "CSS Flexbox" ||
-        tech.name === "CSS Grid" ||
-        tech.name === "Git" ||
-        tech.name === "GitHub Pages" ||
-        tech.name === "GitHub Projects" ||
-        tech.name === "Figma" ||
-        tech.name === "shields.io"
+          tech.name === "JavaScript" ||
+          tech.name === "HTML" ||
+          tech.name === "CSS" ||
+          tech.name === "CSS Flexbox" ||
+          tech.name === "CSS Grid" ||
+          tech.name === "Git" ||
+          tech.name === "GitHub Pages" ||
+          tech.name === "GitHub Projects" ||
+          tech.name === "Figma" ||
+          tech.name === "shields.io"
       ),
       image: kaesekaestchenMockup,
       topFeatures: [
@@ -308,13 +308,23 @@ function Projects() {
   ];
 
   return (
-    <section>
+    <section className="mt-20 w-[80vw] mx-auto">
+      <h2 className="text-4xl">My Portfolio Projects</h2>
       {projects.map((project) => (
-        <>
           <Project project={project}></Project>
-          <hr className="my-4 border-t-2 border-gray-300" />
-        </>
       ))}
+      <p>
+        Check out more of my projects on my{" "}
+        <a
+          href="http://github.com/benschaf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-orange-400 hover:text-orange-600 underline transition duration-300 ease-in-out"
+        >
+          GitHub
+        </a>
+        .
+      </p>
     </section>
   );
 }
