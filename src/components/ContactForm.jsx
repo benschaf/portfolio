@@ -6,8 +6,8 @@ import React from "react";
 const ContactForm = () => {
 
   return (
-    <section className="p-5 max-w-xl mx-auto text-center font-sans" id="contact">
-      <div className="mx-auto mt-10 md:mt-5 md:ml-auto lg:ml-0 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-3xl self-center">
+    <section className="p-5 w-full mx-auto text-center" id="contact">
+      <div className="mx-auto mt-10 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-3xl self-center shadow-xl">
         <div className="bg-white mx-auto rounded-3xl p-4">
           <h2 className="text-2xl font-bold mb-4">Reach out</h2>
           <p className="text-lg mb-4">
