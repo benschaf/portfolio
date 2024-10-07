@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header'
 import NavBar from './components/NavBar';
 import LanguagePicker from './components/LanguagePicker';
@@ -12,12 +12,33 @@ import HeroSection from './components/HeroSection';
 import Footer from './components/Footer';
 
 function App() {
+
+  /* Color Switch */
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+  );
+
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      if (newMode) {
+        document.documentElement.classList.add("dark");
+        localStorage.theme = "dark";
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.theme = "light";
+      }
+      return newMode;
+    });
+  };
   return (
     <>
       <Header>
         <NavBar />
         {/* <LanguagePicker /> */}
-        <ColorThemeSwitch />
+        <ColorThemeSwitch toggleFunction={toggleTheme} isDarkMode={isDarkMode} />
       </Header>
       <main className='mx-4 md:w-[80vw] md:mx-auto max-w-7xl'>
         {/* <HeroSection /> */}

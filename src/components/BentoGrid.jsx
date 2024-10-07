@@ -56,21 +56,21 @@ function BentoGrid() {
             />
           </GridTile>
           <GridTile
-            className="md:bg-white  col-span-2 row-span-2 col-start-1 row-start-2 md:col-span-4 md:row-span-2 md:col-start-1 md:row-start-1 md:p-10 top-0"
+            className="col-span-2 row-span-2 col-start-1 row-start-2 md:col-span-4 md:row-span-2 md:col-start-1 md:row-start-1 md:p-10 top-0"
             innerClassName="flex flex-col justify-between"
           >
             <div>
-              <p className="bg-white md:bg-slate-200 border border-slate-400 shadow-inner w-fit rounded-md px-2 font-mono mb-2">
+              <p className="bg-white dark:bg-card-background border border-secondary shadow-inner w-fit rounded-md px-2 font-mono mb-2">
                 Hi, my name is
               </p>
               <h3 className="text-5xl md:text-7xl">Benjamin Schäfer</h3>
             </div>
             <div className="lg:flex justify-between">
-              <p className="font-bold text-4xl lg:text-4xl self-center text-slate-500">
+              <p className="font-bold text-4xl lg:text-4xl self-center text-text-secondary">
                 I make Websites.
               </p>
               <div className="mt-10 md:mt-5 md:ml-auto lg:ml-0 bg-gradient-to-r via-pink-500 from-orange-500 to-teal-500 w-fit h-fit p-1 rounded-full self-center transition-all duration-500 hover:bg-gradient-to-l">
-                <div className="bg-white rounded-full py-2 px-4">
+                <div className="bg-[#F2F2F2] dark:bg-[#383838] hover:bg-card-btn-background text-text rounded-full py-2 px-4">
                   <a href="#contact">
                     <FontAwesomeIcon icon={faUserPlus} />
                     <span className="pl-2">Let's connect</span>
@@ -117,7 +117,7 @@ function BentoGrid() {
             <div className="flex flex-col space-y-4">
               <div className="text-center">
                 <p className="font-semibold mt-3">Fullstack Web Development</p>
-                <p className="text-sm text-gray-600">Grade: Distinction</p>
+                <p className="text-sm text-text-secondary">Grade: Distinction</p>
               </div>
               <CodeInstituteLogo className="h-10 mx-auto" />
             </div>
@@ -182,7 +182,7 @@ function BentoGrid() {
                 alt="CV Thumbnail"
                 className="w-2/3 object-scale-down [filter:drop-shadow(0_0_1.75rem_rgba(0,_0,_0,_0.2))]"
               />
-              <div className="bg-slate-200 rounded-full py-2 px-3">
+              <div className="border border-card-btn-background hover:bg-card-btn-background text-text rounded-full py-2 px-3">
                 get my CV
               </div>
             </a>

@@ -1,18 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
+  :root {
+    --error-color: #dd2c00;
+    --primary-color: #3f51b5;
+    --light-primary-color: #c5cae9;
+    --dark-primary-color: #303f9f;
+    --accent-color: #ff4081;
+    --light-accent-color: #ff80ab;
+    --dark-accent-color: #f50057;
+
+    /* Light theme Styles */
+    --background-color: #fff;
+    --card-background-color: rgba(0, 0, 0, 0.05);
+    --base-color: #000;
+    --text-color: #212121;
+    --text-color-secondary: #606060;
+    --secondary-color: #737373;
+    --disabled-color: #9b9b9b;
+    --divider-color: #dbdbdb;
+    --primary-btn-color: #000;
+    --primary-btn-text-color: #fff;
+    --secondary-btn-color: #737373;
+    --secondary-btn-text-color: #fff;
+    --card-btn-color: #dadada;
+    --card-btn-text-color: #000;
+  }
+
+  .dark {
+    --background-color: #212121;
+    --card-background-color: rgba(255, 255, 255, 0.1);
+    --base-color: #fff;
+    --text-color: #fff;
+    --text-color-secondary: #bcbcbc;
+    --secondary-color: #bcbcbc;
+    --disabled-color: #646464;
+    --divider-color: #3c3c3c;
+    --primary-btn-color: #fff;
+    --primary-btn-text-color: #000;
+    --secondary-btn-color: #bcbcbc;
+    --secondary-btn-text-color: #000;
+    --card-btn-color: #515151;
+    --card-btn-text-color: #fff;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
     font-family: 'Lato', sans-serif;
-    @apply bg-slate-200;
+    @apply bg-background text-text;
   }
 
   h1,
@@ -24,5 +66,9 @@
     font-family: "Lato", sans-serif;
     font-weight: 900;
     font-style: normal;
+  }
+
+  a {
+    color: unset;
   }
 }
