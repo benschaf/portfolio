@@ -98,7 +98,7 @@ function Project({ project }) {
               <ReactMarkdown className="prose">
                 {project.longDescription}
               </ReactMarkdown>
-              <div className="sticky bottom-0 bg-gradient-to-b from-transparent via-white to-white p-4">
+              <div className="sticky bottom-0 bg-gradient-to-b from-transparent via-[#f2f2f2] to-[#f2f2f2] p-4">
                 <div
                   onClick={handleExpandToggle}
                   className={`lg:mx-0 ${
