@@ -1,8 +1,8 @@
 import React from "react";
 import Project from "./Project";
-import gipfelTutorMockup from "../assets/project-gipfel-tutor-mockup.png";
+import gipfelTutorMockup from "../assets/gipfel-mockup.webp";
 import tonneMockup from "../assets/tonne-mockup.webp";
-import kaesekaestchenMockup from "../assets/project-kaesekaestchen-mockup.png";
+import kaesekaestchenMockup from "../assets/kaesekaestchen-mockup.webp";
 import {
   SiDjango,
   SiReact,
