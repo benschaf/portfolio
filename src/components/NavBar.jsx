@@ -39,7 +39,7 @@ const NavBar = () => {
     <>
       {/* Desktop Navbar */}
       <nav className="hidden md:block m-auto">
-        <ul className="flex space-x-4 rounded-full bg-card-background p-3 backdrop-blur-lg shadow-[10px_10px_25px_0px_rgba(0,0,0,0.2)]">
+        <ul className="flex space-x-4 rounded-full bg-card-background p-3 backdrop-blur-3xl shadow-[10px_10px_25px_0px_rgba(0,0,0,0.2)]">
           {navbarItems.map((item) => (
             <li
               key={item.id}
