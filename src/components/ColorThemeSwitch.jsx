@@ -1,9 +1,9 @@
 import React from "react";
 
-function ColorThemeSwitch( {toggleFunction, isDarkMode } ) {
+function ColorThemeSwitch( {className, toggleFunction, isDarkMode } ) {
 
   return (
-    <div className="absolute end-3">
+    <div className={`absolute me-3 md:me-0 end-3 ${className}`}>
       {/* > Credit for toggle: https://flowbite.com/docs/forms/toggle/ */}
       <label className="flex items-center cursor-pointer relative group">
         <input

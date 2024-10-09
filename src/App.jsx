@@ -38,10 +38,11 @@ function App() {
       <Header>
         <NavBar />
         {/* <LanguagePicker /> */}
-        <ColorThemeSwitch toggleFunction={toggleTheme} isDarkMode={isDarkMode} />
+        <ColorThemeSwitch className="hidden md:block" toggleFunction={toggleTheme} isDarkMode={isDarkMode} />
       </Header>
       <main className='mx-4 md:w-[80vw] md:mx-auto max-w-7xl'>
         {/* <HeroSection /> */}
+        <ColorThemeSwitch className="md:hidden" toggleFunction={toggleTheme} isDarkMode={isDarkMode} />
         <BentoGrid />
         <About />
         <Projects />
