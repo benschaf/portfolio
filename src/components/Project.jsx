@@ -104,7 +104,7 @@ function Project({ project }) {
                   className={`lg:mx-0 ${
                     isExpanded
                       ? "bg-transparent border border-secondary"
-                      : "bg-orange-400 hover:bg-orange-300"
+                      : "bg-orange-400 dark:hover:text-black hover:bg-orange-300"
                   } rounded-full py-2 px-4 block mx-auto w-fit lg:ml-auto text-center transition-colors duration-300`}
                 >
                   {isExpanded ? "See Less" : "See More"}

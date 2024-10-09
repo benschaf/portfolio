@@ -39,11 +39,11 @@ const NavBar = () => {
     <>
       {/* Desktop Navbar */}
       <nav className="hidden md:block m-auto">
-        <ul className="flex space-x-4 rounded-full bg-[rgba(255,255,255,.4)] p-3 backdrop-blur-3xl shadow-[10px_10px_25px_0px_rgba(0,0,0,0.2)]">
+        <ul className="flex space-x-4 rounded-full bg-[rgba(255,255,255,.4)] dark:bg-[rgba(0,0,0,.4)] text-text p-3 backdrop-blur-3xl shadow-[10px_10px_25px_0px_rgba(0,0,0,0.2)]">
           {navbarItems.map((item) => (
             <li
               key={item.id}
-              className="hover:bg-orange-400 transition-colors duration-300 ease-in-out rounded-full px-4 py-2"
+              className="hover:bg-orange-400 dark:hover:text-black transition-colors duration-300 ease-in-out rounded-full px-4 py-2"
             >
               <a
                 href={item.href}
