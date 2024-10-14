@@ -110,7 +110,7 @@ function Project({ project }) {
           className={`relative ${ isExpanded ? 'h-full' : 'h-96'} overflow-hidden bg-card-background rounded-3xl pt-4 px-4 shadow-lg`}
         >
           <h3 className="text-secondary my-3">About the Project</h3>
-          <ReactMarkdown className="prose">
+          <ReactMarkdown className="prose text-text">
             {project.longDescription}
           </ReactMarkdown>
           <div className="sticky bottom-0 bg-gradient-to-b from-transparent to-[#f2f2f2] dark:to-[#383838] p-4">

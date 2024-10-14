@@ -48,6 +48,10 @@
     --card-btn-text-color: #fff;
   }
 
+  .dark .prose {
+    --tw-prose-bold: #fff;
+  }
+
   html {
     scroll-behavior: smooth;
   }
