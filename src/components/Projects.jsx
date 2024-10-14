@@ -181,6 +181,7 @@ function Projects() {
           tech.name === "Amazon Web Services"
       ),
       image: gipfelTutorMockup,
+      backgroundColor: "#FAD9B4",
       topFeatures: [
         {
           id: 1,
@@ -233,6 +234,7 @@ function Projects() {
           tech.name === "Cloudinary"
       ),
       image: tonneMockup,
+      backgroundColor: "#D9F1F2",
       topFeatures: [
         {
           id: 1,
@@ -284,6 +286,7 @@ function Projects() {
           tech.name === "shields.io"
       ),
       image: kaesekaestchenMockup,
+      backgroundColor: "#CFFFFA",
       topFeatures: [
         {
           id: 2,

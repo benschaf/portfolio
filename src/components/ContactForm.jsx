@@ -25,15 +25,17 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  emailjs.sendForm("service_pc74n1j", "template_q4h7e99", "#contact-form").then(
-    (response) => {
-      console.log("SUCCESS!", response.status, response.text);
-    },
-    (error) => {
-      console.log("FAILED...", error);
-    }
-  );
-};
+    emailjs
+      .sendForm("service_pc74n1j", "template_q4h7e99", "#contact-form")
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+  };
 
   return (
     <section className="my-16 p-9 bg-teal-100 rounded-3xl" id="contact">
@@ -98,64 +100,62 @@ const ContactForm = () => {
         </div>
         <div>
           <p className="mb-3">Or send me a message right here:</p>
-          <form id="contact-form" onSubmit={handleSubmit} className="space-y-4">
-            <div className="relative">
+          <form
+            id="contact-form"
+            class="py-8 text-base w-96 leading-6 space-y-9 text-gray-700 sm:text-lg sm:leading-7"
+          >
+            <div class="relative">
               <input
-                type="text"
+                id="user_name"
                 name="user_name"
-                placeholder=" "
-                className="peer mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+                type="text"
+                autofill="off"
+                className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-teal-600 pl-2"
+                placeholder="name"
               />
-              <label className="absolute left-3 top-2 text-gray-500 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:transform peer-placeholder-shown:-translate-y-1/2 peer-focus:top-2 peer-focus:text-teal-500 transition-all text-sm">
+              <label
+                for="user_name"
+                className="cursor-text absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm pl-2"
+              >
                 Name
               </label>
             </div>
-            <div className="relative">
+            <div class="relative">
               <input
-                type="email"
+                id="user_email"
                 name="user_email"
-                placeholder=" "
-                className="peer mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+                type="email"
+                className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-teal-600 pl-2"
+                placeholder="Email address"
               />
-              <label className="absolute left-3 top-2 text-gray-500 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:transform peer-placeholder-shown:-translate-y-1/2 peer-focus:top-2 peer-focus:text-teal-500 transition-all text-sm">
-                Email
+              <label
+                for="user_email"
+                className="cursor-text absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm pl-2"
+              >
+                Email Address
               </label>
             </div>
-            <div className="relative">
+            <div class="relative">
               <textarea
+                id="message"
                 name="message"
-                placeholder=" "
-                className="peer mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
-              ></textarea>
-              <label className="absolute left-3 top-2 text-gray-500 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:transform peer-placeholder-shown:-translate-y-1/2 peer-focus:top-2 peer-focus:text-teal-500 transition-all text-sm">
+                type="email"
+                className="bg-transparent peer placeholder-transparent h-32 w-full border-b-2 border-l-0 border-r-2 border-t-0 border-gray-300 text-gray-900 focus:ring-0 focus:border-teal-600 pl-2"
+                placeholder="Email address"
+              />
+              <label
+                for="message"
+                className="cursor-text absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm pl-2"
+              >
                 Message
               </label>
             </div>
-            <div>
-              <input
-                type="submit"
-                value="Send"
-                className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
-              />
+            <div class="relative">
+              <button class="bg-blue-500 text-white rounded-md px-2 py-1">
+                Submit
+              </button>
             </div>
           </form>
-          <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-						<div class="relative">
-							<input name="user_name" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
-							<label for="user_name" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
-						</div>
-						<div class="relative">
-							<input name="user_email" type="email" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email address" />
-							<label for="user_email" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email Address</label>
-						</div>
-						<div class="relative">
-							<textarea name="message" type="email" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email address" />
-							<label for="message" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email Address</label>
-						</div>
-						<div class="relative">
-							<button class="bg-blue-500 text-white rounded-md px-2 py-1">Submit</button>
-						</div>
-					</div>
         </div>
       </div>
     </section>
