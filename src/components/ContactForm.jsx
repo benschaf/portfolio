@@ -38,7 +38,10 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="my-16 p-9 bg-teal-100 rounded-3xl" id="contact">
+    <section
+      className="my-16 p-9 bg-[#e3eefc] dark:bg-card-background rounded-3xl"
+      id="contact"
+    >
       <h2 className="text-5xl text-center font-bold">Contact me.</h2>
       <p className="text-lg mb-9 text-center">
         Let's create something together 🪴
@@ -99,10 +102,10 @@ const ContactForm = () => {
           </div>
         </div>
         <div>
-          <p className="mb-3">Or send me a message right here:</p>
+          <p>Or send me a message right here:</p>
           <form
             id="contact-form"
-            class="py-8 text-base w-96 leading-6 space-y-9 text-gray-700 sm:text-lg sm:leading-7"
+            class="py-8 text-base w-full md:w-96 leading-6 space-y-9 text-gray-700 sm:text-lg sm:leading-7"
           >
             <div class="relative">
               <input
