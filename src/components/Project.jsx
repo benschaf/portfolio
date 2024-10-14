@@ -18,7 +18,7 @@ function Project({ project }) {
   };
 
   return (
-    <div key={project.id} className="mt-8 lg:mx-auto" style={{ backgroundColor: project.backgroundColor }}>
+    <div key={project.id} className="mt-8 lg:mx-auto">
       <div className="relative">
         <div className="flex gap-12">
           <div className="lg:w-full">
@@ -41,12 +41,12 @@ function Project({ project }) {
             <p className="my-4 font-semibold text-text">
               {project.description}
             </p>
-            <div className="flex lg:flex-row gap-4">
+            <div className="flex gap-4">
               <a
                 href={project.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-secondary-btn-background rounded-full w-fit py-2 px-4 hover:bg-secondary-btn-background transition-colors duration-300"
+                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 hover:bg-secondary-btn-background transition-colors duration-300"
               >
                 Visit live Website
                 <FontAwesomeIcon
@@ -58,7 +58,7 @@ function Project({ project }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-secondary-btn-background rounded-full w-fit py-2 px-4 hover:bg-secondary-btn-background duration-300"
+                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 hover:bg-secondary-btn-background duration-300"
               >
                 GitHub
                 <FontAwesomeIcon
@@ -82,10 +82,10 @@ function Project({ project }) {
           </div>
         </div>
       </div>
-      <div className="flex gap-12">
+      <div className="lg:flex gap-12 my-8">
         <div
           id="tech-stack"
-          className={`bg-card-background w-1/2 ${isExpanded ? 'h-fit' : ''} rounded-3xl p-8 shadow-lg`}
+          className={`bg-card-background mb-8 lg:mb-0 lg:w-1/2 ${isExpanded ? 'h-fit' : ''} rounded-3xl p-8 shadow-lg`}
         >
           <h3 className="text-secondary">Top Technical Features</h3>
           {project.topFeatures.map((feature) => (
@@ -120,7 +120,7 @@ function Project({ project }) {
                 isExpanded
                   ? "bg-transparent border border-secondary"
                   : "bg-orange-400 dark:hover:text-black hover:bg-orange-300"
-              } rounded-full py-2 px-4 block mx-auto w-fit lg:ml-auto text-center transition-colors duration-300`}
+              } rounded-full py-2 px-4 block ml-auto w-fit lg:ml-auto text-center transition-colors duration-300`}
             >
               {isExpanded ? "See Less" : "See More"}
               <FontAwesomeIcon
