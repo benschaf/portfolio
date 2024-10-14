@@ -18,7 +18,7 @@ function Project({ project }) {
   };
 
   return (
-    <div key={project.id} className="mt-8 lg:mx-auto">
+    <div key={project.id} className="mt-24 lg:mx-auto">
       <div className="relative">
         <div className="flex gap-12">
           <div className="lg:w-full">
@@ -26,7 +26,11 @@ function Project({ project }) {
               <p className="font-bold text-secondary">Portfolio Project</p>
               <h2 className="text-3xl text-text">{project.name}</h2>
             </div>
-            <ul id="tech-stack" className="mt-3 flex gap-2 flex-wrap">
+            <p className="my-4 font-semibold text-text">
+              {project.description}
+            </p>
+            <h3>Tech Stack</h3>
+            <ul id="tech-stack" className="flex gap-2 flex-wrap">
               {project.techStack.map((tech) => (
                 <li key={tech.id}>
                   <BrandIcon
@@ -38,33 +42,30 @@ function Project({ project }) {
                 </li>
               ))}
             </ul>
-            <p className="my-4 font-semibold text-text">
-              {project.description}
-            </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-8">
               <a
                 href={project.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 hover:bg-secondary-btn-background transition-colors duration-300"
+                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 bg-blue-500 text-white hover:bg-blue-600 transition-colors"
               >
                 Visit live Website
                 <FontAwesomeIcon
                   className="ml-3"
                   icon={faArrowUpRightFromSquare}
-                ></FontAwesomeIcon>
+                />
               </a>
               <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 hover:bg-secondary-btn-background duration-300"
+                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 bg-gray-300 hover:bg-gray-900 hover:text-white transition-colors"
               >
                 GitHub
                 <FontAwesomeIcon
                   className="ml-3"
                   icon={faGithub}
-                ></FontAwesomeIcon>
+                />
               </a>
             </div>
             <img

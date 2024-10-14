@@ -26,7 +26,7 @@ function BrandIcon({
 
   if (small) {
     return (
-      <div className="flex items-center justify-center mx-auto bg-card-background text-secondary rounded-full px-2 py-1 text-xs">
+      <div className="flex items-center justify-center mx-auto bg-card-background text-text-secondary rounded-full px-2 py-1 text-xs">
         {siIcon}
         {!link ? (
           <span className="ml-1 ">{name}</span>

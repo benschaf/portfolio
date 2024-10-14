@@ -39,16 +39,18 @@ const ContactForm = () => {
 
   return (
     <section
-      className="my-16 p-9 bg-[#e3eefc] dark:bg-card-background rounded-3xl"
+      className="my-16 p-9 bg-[#e3eefc] dark:bg-card-background rounded-3xl text-center"
       id="contact"
     >
-      <h2 className="text-5xl text-center font-bold">Contact me.</h2>
-      <p className="text-lg mb-9 text-center">
+      <h2 class="text-5xl text-center font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-teal-500 inline-block text-transparent bg-clip-text">
+        Contact me.
+      </h2>
+      <p className="text-lg mb-16 text-center">
         Let's create something together 🪴
       </p>
       <div className="flex flex-col gap-16 md:gap-4 justify-around md:flex-row">
         <div className="flex flex-col gap-6">
-          <p>Reach me via the following platforms.</p>
+          <p className="font-bold">Reach me via the following platforms.</p>
           <a
             href="mailto:benibschafer@gmail.com"
             className="group rounded-3xl hover:bg-card-background transition-colors"
@@ -59,9 +61,9 @@ const ContactForm = () => {
               </div>
               <div className="text-left">
                 <p>Mail me at:</p>
-                <p
-            className="text-blue-500 hover:text-blue-700"
-                >benibschafer@gmail.com</p>
+                <p className="text-blue-500 hover:text-blue-700">
+                  benibschafer@gmail.com
+                </p>
               </div>
             </div>
           </a>
@@ -77,9 +79,9 @@ const ContactForm = () => {
               </div>
               <div className="text-left">
                 <p>Connect with me on LinkedIn:</p>
-                <p
-            className="text-blue-500 hover:text-blue-700"
-                >linkedin.com/in/benjamin-schafer</p>
+                <p className="text-blue-500 hover:text-blue-700">
+                  linkedin.com/in/benjamin-schafer
+                </p>
               </div>
             </div>
           </a>
@@ -103,7 +105,7 @@ const ContactForm = () => {
           </a>
         </div>
         <div>
-          <p>Or send me a message right here:</p>
+          <p className="font-bold">Or send me a message right here:</p>
           <form
             id="contact-form"
             class="py-8 text-base w-full md:w-96 leading-6 space-y-9 text-gray-700 sm:text-lg sm:leading-7"

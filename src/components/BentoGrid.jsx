@@ -65,9 +65,9 @@ function BentoGrid() {
               </p>
               <h3 className="text-5xl md:text-7xl">Benjamin Schäfer</h3>
             </div>
-            <div className="lg:flex justify-between">
+            <div className="md:flex justify-between">
               <p className="font-bold text-4xl lg:text-4xl self-center text-text-secondary">
-                I make Websites.
+                Frontend Developer.
               </p>
               <div className="group cursor-pointer hover: mt-10 md:mt-5 md:ml-auto lg:ml-0 bg-gradient-to-r from-orange-300 via-pink-300 to-teal-300 w-fit h-fit p-1 rounded-full self-center transition-all duration-500 hover:bg-gradient-to-l">
                 <div className="whitespace-nowrap bg-[#F2F2F2] dark:bg-[#383838] group-hover:bg-transparent transition-all text-text rounded-full py-2 px-4">
