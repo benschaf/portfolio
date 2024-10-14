@@ -46,60 +46,61 @@ const ContactForm = () => {
       <p className="text-lg mb-9 text-center">
         Let's create something together 🪴
       </p>
-      <div className="flex gap-4 justify-around">
-        <div>
-          <div className="flex items-center">
-            <div className="mr-3 rounded-full bg-card-background p-3 w-12 h-12 flex items-center justify-center">
-              <SiGmail className="text-2xl" />
+      <div className="flex flex-col gap-16 md:gap-4 justify-around md:flex-row">
+        <div className="flex flex-col gap-6">
+          <p>Reach me via the following platforms.</p>
+          <a
+            href="mailto:benibschafer@gmail.com"
+            className="group rounded-3xl hover:bg-card-background transition-colors"
+          >
+            <div className="flex items-center m-auto">
+              <div className="mr-3 rounded-full bg-card-background p-3 w-12 h-12 flex items-center justify-center">
+                <SiGmail className="text-2xl" />
+              </div>
+              <div className="text-left">
+                <p>Mail me at:</p>
+                <p
+            className="text-blue-500 hover:text-blue-700"
+                >benibschafer@gmail.com</p>
+              </div>
             </div>
-            <div className="text-left">
-              <p>Mail me at:</p>
-              <p>
-                <a
-                  href="mailto:benibschafer@gmail.com"
-                  className="text-blue-500 hover:text-blue-700"
-                >
-                  benibschafer@gmail.com
-                </a>
-              </p>
+          </a>
+          <a
+            href="https://linkedin.com/in/benjamin-schafer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group rounded-3xl hover:bg-card-background transition-colors pr-3"
+          >
+            <div className="flex items-center m-auto">
+              <div className="mr-3 rounded-full bg-card-background p-3 w-12 h-12 flex items-center justify-center">
+                <SiLinkedin className="text-2xl" />
+              </div>
+              <div className="text-left">
+                <p>Connect with me on LinkedIn:</p>
+                <p
+            className="text-blue-500 hover:text-blue-700"
+                >linkedin.com/in/benjamin-schafer</p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center mt-4">
-            <div className="mr-3 rounded-full bg-card-background p-3 w-12 h-12 flex items-center justify-center">
-              <SiLinkedin className="text-2xl" />
-            </div>
-            <div className="text-left">
-              <p>Connect with me on LinkedIn:</p>
-              <p>
-                <a
-                  href="https://linkedin.com/in/benjamin-schafer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-700"
-                >
-                  linkedin.com/in/benjamin-schafer
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center mt-4">
-            <div className="mr-3 rounded-full bg-card-background p-3 w-12 h-12 flex items-center justify-center">
-              <SiGithub className="text-2xl" />
-            </div>
-            <div className="text-left">
-              <p>Check out my GitHub:</p>
-              <p>
-                <a
-                  href="https://github.com/benibschafer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-700"
-                >
+          </a>
+          <a
+            href="https://github.com/benibschafer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group rounded-3xl hover:bg-card-background transition-colors"
+          >
+            <div className="flex items-center m-auto">
+              <div className="mr-3 rounded-full bg-card-background p-3 w-12 h-12 flex items-center justify-center">
+                <SiGithub className="text-2xl" />
+              </div>
+              <div className="text-left">
+                <p>Check out my GitHub:</p>
+                <p className="text-blue-500 group-hover:text-blue-700">
                   github.com/benibschafer
-                </a>
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div>
           <p>Or send me a message right here:</p>
