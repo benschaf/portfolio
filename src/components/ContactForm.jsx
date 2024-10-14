@@ -114,7 +114,7 @@ const ContactForm = () => {
                 name="user_name"
                 type="text"
                 autofill="off"
-                className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-teal-600 pl-2"
+                className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-blue-200 pl-2"
                 placeholder="name"
               />
               <label
@@ -129,7 +129,7 @@ const ContactForm = () => {
                 id="user_email"
                 name="user_email"
                 type="email"
-                className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-teal-600 pl-2"
+                className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-blue-200 pl-2"
                 placeholder="Email address"
               />
               <label
@@ -144,7 +144,7 @@ const ContactForm = () => {
                 id="message"
                 name="message"
                 type="email"
-                className="bg-transparent peer placeholder-transparent h-32 w-full border-b-2 border-l-0 border-r-2 border-t-0 border-gray-300 text-gray-900 focus:ring-0 focus:border-teal-600 pl-2"
+                className="bg-transparent peer placeholder-transparent h-32 w-full border-b-2 border-l-0 border-r-2 border-t-0 border-gray-300 text-gray-900 focus:ring-0 focus:border-blue-200 pl-2"
                 placeholder="Email address"
               />
               <label
