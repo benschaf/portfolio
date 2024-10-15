@@ -5,6 +5,75 @@ import React, { useEffect } from "react";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const ContactForm = () => {
+  /* Validation */
+  const [formData, setFormData] = useState({
+    name: {
+      value: "",
+      isValid: false,
+    },
+    email: {
+      value: "",
+      isValid: false,
+    },
+    message: {
+      value: "",
+      isValid: false,
+    },
+  });
+
+  function validateForm() {
+    setFormData((prevState) => ({
+      ...prevState,
+      name: {
+        ...prevState.name,
+        isValid: prevState.name.value !== "",
+      },
+      email: {
+        ...prevState.email,
+        isValid:
+          prevState.email.value !== "" && prevState.email.value.includes("@"),
+      },
+      message: {
+        ...prevState.message,
+        isValid: prevState.message.value !== "",
+      },
+    }));
+  }
+
+  useEffect(() => {
+    validateForm();
+  }, [formData.name.value, formData.email.value, formData.message.value]);
+
+  function handleFormChange(identifier, value) {
+    setFormData((prevState) => ({
+      ...prevState,
+      [identifier]: {
+        ...prevState[identifier],
+        value: value,
+      },
+    }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (
+      formData.name.isValid &&
+      formData.email.isValid &&
+      formData.message.isValid
+    ) {
+      emailjs
+        .sendForm("service_pc74n1j", "template_q4h7e99", "#contact-form")
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
+    }
+  }
+
   emailjs.init({
     publicKey: "tdqAJRnjr7QEYczq-",
     // Do not allow headless browsers
@@ -22,20 +91,6 @@ const ContactForm = () => {
       throttle: 10000,
     },
   });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm("service_pc74n1j", "template_q4h7e99", "#contact-form")
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-  };
 
   return (
     <section
@@ -119,6 +174,7 @@ const ContactForm = () => {
                 autofill="off"
                 className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-blue-200 pl-2"
                 placeholder="name"
+                onBlur={(e) => handleFormChange("name", e.target.value)}
               />
               <label
                 htmlFor="user_name"
@@ -134,6 +190,7 @@ const ContactForm = () => {
                 type="email"
                 className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-blue-200 pl-2"
                 placeholder="Email address"
+                onBlur={(e) => handleFormChange("email", e.target.value)}
               />
               <label
                 htmlFor="user_email"
@@ -149,6 +206,7 @@ const ContactForm = () => {
                 type="email"
                 className="bg-transparent peer placeholder-transparent h-32 w-full border-b-2 border-l-0 border-r-2 border-t-0 border-gray-300 text-gray-900 focus:ring-0 focus:border-blue-200 pl-2"
                 placeholder="Email address"
+                onBlur={(e) => handleFormChange("message", e.target.value)}
               />
               <label
                 htmlFor="message"
