@@ -1,96 +1,142 @@
 import { SiGithub, SiGmail, SiLinkedin } from "@icons-pack/react-simple-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
-import React, { useEffect } from "react";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import React, { useEffect, useState } from "react";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const ContactForm = () => {
-  /* Validation */
   const [formData, setFormData] = useState({
     name: {
       value: "",
       isValid: false,
+      error: "",
+      edited: false,
     },
     email: {
       value: "",
       isValid: false,
+      error: "",
+      edited: false,
     },
     message: {
       value: "",
       isValid: false,
+      error: "",
+      edited: false,
     },
   });
 
-  function validateForm() {
+  const [submitStatus, setSubmitStatus] = useState({
+    message: "",
+    type: "",
+  });
+
+  const validateName = (name) => {
+    if (name.trim() === "") {
+      return "Name is required.";
+    }
+    return "";
+  };
+
+  const validateEmail = (email) => {
+    if (email.trim() === "") {
+      return "Email is required.";
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      return "Email is invalid.";
+    }
+    return "";
+  };
+
+  const validateMessage = (message) => {
+    if (message.trim() === "") {
+      return "Message is required.";
+    }
+    return "";
+  };
+
+  const validateForm = () => {
     setFormData((prevState) => ({
       ...prevState,
       name: {
         ...prevState.name,
-        isValid: prevState.name.value !== "",
+        isValid: validateName(prevState.name.value) === "",
+        error: validateName(prevState.name.value),
       },
       email: {
         ...prevState.email,
-        isValid:
-          prevState.email.value !== "" && prevState.email.value.includes("@"),
+        isValid: validateEmail(prevState.email.value) === "",
+        error: validateEmail(prevState.email.value),
       },
       message: {
         ...prevState.message,
-        isValid: prevState.message.value !== "",
+        isValid: validateMessage(prevState.message.value) === "",
+        error: validateMessage(prevState.message.value),
       },
     }));
-  }
+  };
 
-  useEffect(() => {
-    validateForm();
-  }, [formData.name.value, formData.email.value, formData.message.value]);
+  const handleFormChange = (identifier, value) => {
+    setFormData((prevState) => {
+      const newState = {
+        ...prevState,
+        [identifier]: {
+          ...prevState[identifier],
+          value: value,
+          edited: true,
+        },
+      };
+      validateForm(identifier);
+      return newState;
+    });
+  };
 
-  function handleFormChange(identifier, value) {
-    setFormData((prevState) => ({
-      ...prevState,
-      [identifier]: {
-        ...prevState[identifier],
-        value: value,
-      },
-    }));
-  }
-
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    validateForm();
     if (
-      formData.name.isValid &&
-      formData.email.isValid &&
-      formData.message.isValid
+      !formData.name.isValid ||
+      !formData.email.isValid ||
+      !formData.message.isValid
     ) {
-      emailjs
-        .sendForm("service_pc74n1j", "template_q4h7e99", "#contact-form")
-        .then(
-          (response) => {
-            console.log("SUCCESS!", response.status, response.text);
-          },
-          (error) => {
-            console.log("FAILED...", error);
-          }
-        );
+      setSubmitStatus({
+        message: "Please fill in all fields correctly.",
+        type: "error",
+      });
+      return;
     }
-  }
 
-  emailjs.init({
-    publicKey: "tdqAJRnjr7QEYczq-",
-    // Do not allow headless browsers
-    blockHeadless: true,
-    blockList: {
-      // Block the suspended emails
-      list: ["foo@emailjs.com", "bar@emailjs.com"],
-      // The variable contains the email address
-      watchVariable: "userEmail",
-    },
-    limitRate: {
-      // Set the limit rate for the application
-      id: "app",
-      // Allow 1 request per 10s
-      throttle: 10000,
-    },
-  });
+    emailjs.init({
+      publicKey: "tdqAJRnjr7QEYczq-",
+      blockHeadless: true,
+      blockList: {
+        list: ["foo@emailjs.com", "bar@emailjs.com"],
+      },
+      limitRate: {
+        id: "app",
+        throttle: 10000,
+      },
+    });
+
+    emailjs
+      .sendForm("service_pc74n1j", "template_q4h7e99", "#contact-form")
+      .then(
+        (response) => {
+          setSubmitStatus({
+            message: "Message sent successfully!",
+            type: "success",
+          });
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          setSubmitStatus({
+            message: "Message failed to send. Please try again later.",
+            type: "error",
+          });
+          console.log("FAILED...", error);
+        }
+      );
+  };
 
   return (
     <section
@@ -163,7 +209,7 @@ const ContactForm = () => {
           <p className="font-bold">Or send me a message right here:</p>
           <form
             id="contact-form"
-            className="py-8 text-base w-full md:w-96 leading-6 space-y-9 text-gray-700 sm:text-lg sm:leading-7"
+            className="py-8 text-base w-full md:w-96 leading-6 space-y-2 text-gray-700 sm:text-lg sm:leading-7"
             onSubmit={handleSubmit}
           >
             <div className="relative">
@@ -174,7 +220,7 @@ const ContactForm = () => {
                 autofill="off"
                 className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-blue-200 pl-2"
                 placeholder="name"
-                onBlur={(e) => handleFormChange("name", e.target.value)}
+                onChange={(e) => handleFormChange("name", e.target.value)}
               />
               <label
                 htmlFor="user_name"
@@ -182,6 +228,15 @@ const ContactForm = () => {
               >
                 Name
               </label>
+              {formData.name.error && formData.name.edited ? (
+                <p className="text-red-600 bg-red-200 rounded mt-1 w-fit px-4 text-sm">
+                  {formData.name.error}
+                </p>
+              ) : (
+                <p className="invisible text-red-600 bg-red-200 rounded mt-1 w-fit px-4 text-sm">
+                   a
+                </p>
+              )}
             </div>
             <div className="relative">
               <input
@@ -190,7 +245,7 @@ const ContactForm = () => {
                 type="email"
                 className="bg-transparent peer placeholder-transparent h-10 w-full border-b-2 border-x-0 border-t-0 border-b-gray-300 text-gray-900 focus:ring-0 focus:border-blue-200 pl-2"
                 placeholder="Email address"
-                onBlur={(e) => handleFormChange("email", e.target.value)}
+                onChange={(e) => handleFormChange("email", e.target.value)}
               />
               <label
                 htmlFor="user_email"
@@ -198,6 +253,10 @@ const ContactForm = () => {
               >
                 Email Address
               </label>
+              {/* TODO: STYLE the next two error messages and then the form is done */}
+              {formData.email.error && formData.email.edited && (
+                <p className="text-red-500 text-sm">{formData.email.error}</p>
+              )}
             </div>
             <div className="relative">
               <textarea
@@ -206,7 +265,7 @@ const ContactForm = () => {
                 type="email"
                 className="bg-transparent peer placeholder-transparent h-32 w-full border-b-2 border-l-0 border-r-2 border-t-0 border-gray-300 text-gray-900 focus:ring-0 focus:border-blue-200 pl-2"
                 placeholder="Email address"
-                onBlur={(e) => handleFormChange("message", e.target.value)}
+                onChange={(e) => handleFormChange("message", e.target.value)}
               />
               <label
                 htmlFor="message"
@@ -214,6 +273,9 @@ const ContactForm = () => {
               >
                 Message
               </label>
+              {formData.message.error && formData.message.edited && (
+                <p className="text-red-500 text-sm">{formData.message.error}</p>
+              )}
             </div>
             <div className="relative">
               <button
@@ -223,6 +285,19 @@ const ContactForm = () => {
                 <FontAwesomeIcon className="mr-2" icon={faEnvelope} />
                 Submit
               </button>
+            </div>
+            <div>
+              {submitStatus.message && (
+                <p
+                  className={`text-sm ${
+                    submitStatus.type === "success"
+                      ? "text-green-500"
+                      : "text-red-500"
+                  }`}
+                >
+                  {submitStatus.message}
+                </p>
+              )}
             </div>
           </form>
         </div>
