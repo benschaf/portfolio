@@ -2,7 +2,7 @@ import { SiGithub, SiGmail, SiLinkedin } from "@icons-pack/react-simple-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
 import React, { useEffect } from "react";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const ContactForm = () => {
   emailjs.init({
@@ -42,7 +42,7 @@ const ContactForm = () => {
       className="my-16 p-9 bg-[#e3eefc] dark:bg-card-background rounded-3xl text-center"
       id="contact"
     >
-      <h2 class="text-5xl text-center font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-teal-500 inline-block text-transparent bg-clip-text">
+      <h2 className="text-5xl text-center font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-teal-500 inline-block text-transparent bg-clip-text">
         Contact me.
       </h2>
       <p className="text-lg mb-16 text-center">
@@ -108,9 +108,10 @@ const ContactForm = () => {
           <p className="font-bold">Or send me a message right here:</p>
           <form
             id="contact-form"
-            class="py-8 text-base w-full md:w-96 leading-6 space-y-9 text-gray-700 sm:text-lg sm:leading-7"
+            className="py-8 text-base w-full md:w-96 leading-6 space-y-9 text-gray-700 sm:text-lg sm:leading-7"
+            onSubmit={handleSubmit}
           >
-            <div class="relative">
+            <div className="relative">
               <input
                 id="user_name"
                 name="user_name"
@@ -120,13 +121,13 @@ const ContactForm = () => {
                 placeholder="name"
               />
               <label
-                for="user_name"
+                htmlFor="user_name"
                 className="cursor-text absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm pl-2"
               >
                 Name
               </label>
             </div>
-            <div class="relative">
+            <div className="relative">
               <input
                 id="user_email"
                 name="user_email"
@@ -135,13 +136,13 @@ const ContactForm = () => {
                 placeholder="Email address"
               />
               <label
-                for="user_email"
+                htmlFor="user_email"
                 className="cursor-text absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm pl-2"
               >
                 Email Address
               </label>
             </div>
-            <div class="relative">
+            <div className="relative">
               <textarea
                 id="message"
                 name="message"
@@ -150,14 +151,18 @@ const ContactForm = () => {
                 placeholder="Email address"
               />
               <label
-                for="message"
+                htmlFor="message"
                 className="cursor-text absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm pl-2"
               >
                 Message
               </label>
             </div>
-            <div class="relative">
-              <button class="bg-blue-500 text-white rounded-md px-2 py-1">
+            <div className="relative">
+              <button
+                type="submit"
+                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 bg-orange-500 text-white hover:bg-orange-600 transition-colors"
+              >
+                <FontAwesomeIcon className="mr-2" icon={faEnvelope} />
                 Submit
               </button>
             </div>
