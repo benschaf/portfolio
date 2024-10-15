@@ -7,7 +7,7 @@ import ColorThemeSwitch from './components/ColorThemeSwitch';
 import BentoGrid from './components/BentoGrid';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
-import ContactForm from './components/ContactForm';
+import ContactSection from './components/ContactSection';
 import HeroSection from './components/HeroSection';
 import Footer from './components/Footer';
 
@@ -47,7 +47,7 @@ function App() {
         <About />
         <Projects />
         <Testimonials />
-        <ContactForm />
+        <ContactSection />
       </main>
       <Footer>
       </Footer>
