@@ -6,14 +6,14 @@ import ContactLink from "./ContactLink";
 const ContactSection = () => {
   return (
     <section
-      className="my-16 md:p-9 bg-orange-50 dark:bg-card-background rounded-3xl text-center"
+      className="my-16 md:p-9 rounded-3xl text-center bg-card-background"
       id="contact"
     >
       <h2 className="text-5xl text-center font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-teal-500 inline-block text-transparent bg-clip-text">
         Contact me.
       </h2>
       <p className="text-lg mb-16 text-center">
-        Let's create something together 🪴
+        Let's create something together
       </p>
       <div className="flex flex-col gap-16 md:gap-4 justify-around items-center lg:items-start lg:flex-row">
         <div className="flex flex-col gap-6">

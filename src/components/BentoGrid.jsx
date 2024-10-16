@@ -21,7 +21,7 @@ import {
   SiLinkedin,
   SiGithub,
 } from "@icons-pack/react-simple-icons";
-import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
 const tools = [
   { icon: SiDjango, name: "Django" },
@@ -65,20 +65,22 @@ function BentoGrid() {
               </p>
               <h3 className="text-5xl md:text-7xl">Benjamin Schäfer</h3>
             </div>
-            <div className="md:flex justify-between">
-              <p className="font-bold text-4xl lg:text-4xl self-center text-text-secondary">
-                Frontend Developer.
+            <div>
+              <p className="font-bold text-xl self-center text-text-secondary mt-6">
+                I am a Fullstack Developer with a focus on Django, React and modern
+                web technologies.
               </p>
-              <div className="group cursor-pointer mt-10 md:mt-5 md:ml-auto lg:ml-0 w-fit h-fit p-1 rounded-lg self-center transition-all duration-500 bg-teal-900 hover:bg-teal-700 hover:shadow-xl transform hover:scale-105">
-                <a
-                  href="#contact"
-                  className="flex items-center whitespace-nowrap bg-transparent text-white rounded-lg py-2 px-4 transition-all"
-                >
-                  <FontAwesomeIcon icon={faUserPlus} />
-                  <span className="pl-2">Let's connect</span>
-                </a>
-              </div>
+              <p className="text-lg md:text-xl text-text-secondary mt-3">
+                I come from a professional background in education
+              </p>
             </div>
+            <a
+              href="#contact"
+              className="group cursor-pointer mt-10 md:mt-5 md:ml-auto lg:ml-0 text-xl w-fit h-fit p-1 self-end transition-all duration-500 bg-teal-600 hover:bg-teal-900 hover:shadow-xl transform hover:scale-105 flex items-center whitespace-nowrap text-white rounded-lg py-2 px-4"
+            >
+              <FontAwesomeIcon icon={faUserPlus} />
+              <span className="pl-2">Hire me</span>
+            </a>
           </GridTile>
           <GridTile
             title="Languages I know"
@@ -186,7 +188,7 @@ function BentoGrid() {
                 className="w-2/3 object-scale-down [filter:drop-shadow(0_0_1.75rem_rgba(0,_0,_0,_0.2))]"
               />
               <div className="border border-card-btn-background hover:bg-card-btn-background text-text rounded-full py-2 px-3">
-                get my CV
+                download my CV
               </div>
             </a>
           </GridTile>
