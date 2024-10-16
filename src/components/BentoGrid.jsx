@@ -69,13 +69,14 @@ function BentoGrid() {
               <p className="font-bold text-4xl lg:text-4xl self-center text-text-secondary">
                 Frontend Developer.
               </p>
-              <div className="group cursor-pointer hover: mt-10 md:mt-5 md:ml-auto lg:ml-0 bg-gradient-to-r from-orange-300 via-pink-300 to-teal-300 w-fit h-fit p-1 rounded-full self-center transition-all duration-500 hover:bg-gradient-to-l">
-                <div className="whitespace-nowrap bg-[#F2F2F2] dark:bg-[#383838] group-hover:bg-transparent transition-all text-text rounded-full py-2 px-4">
-                  <a href="#contact">
-                    <FontAwesomeIcon icon={faUserPlus} />
-                    <span className="pl-2">Let's connect</span>
-                  </a>
-                </div>
+              <div className="group cursor-pointer mt-10 md:mt-5 md:ml-auto lg:ml-0 w-fit h-fit p-1 rounded-lg self-center transition-all duration-500 bg-teal-900 hover:bg-teal-700 hover:shadow-xl transform hover:scale-105">
+                <a
+                  href="#contact"
+                  className="flex items-center whitespace-nowrap bg-transparent text-white rounded-lg py-2 px-4 transition-all"
+                >
+                  <FontAwesomeIcon icon={faUserPlus} />
+                  <span className="pl-2">Let's connect</span>
+                </a>
               </div>
             </div>
           </GridTile>
@@ -117,7 +118,9 @@ function BentoGrid() {
             <div className="flex flex-col space-y-4">
               <div className="text-center">
                 <p className="font-semibold mt-3">Fullstack Web Development</p>
-                <p className="text-sm text-text-secondary">Grade: Distinction</p>
+                <p className="text-sm text-text-secondary">
+                  Grade: Distinction
+                </p>
               </div>
               <CodeInstituteLogo className="h-10 mx-auto" />
             </div>

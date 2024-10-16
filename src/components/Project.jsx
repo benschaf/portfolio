@@ -23,7 +23,7 @@ function Project({ project }) {
         <div className="flex gap-12">
           <div className="lg:w-full">
             <div className="z-30 sticky md:static -mx-4 px-4 top-0 backdrop-blur-3xl md:backdrop-blur-none">
-              <p className="font-bold text-secondary">Portfolio Project</p>
+              <p className="font-bold text-text-secondary">Portfolio Project</p>
               <h2 className="text-3xl text-text">{project.name}</h2>
             </div>
             <p className="my-4 font-semibold text-text">
@@ -47,7 +47,7 @@ function Project({ project }) {
                 href={project.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 bg-blue-500 text-white hover:bg-blue-600 transition-colors"
+                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 bg-blue-600 text-white hover:bg-blue-700 transition-colors"
               >
                 Visit live Website
                 <FontAwesomeIcon
@@ -88,7 +88,7 @@ function Project({ project }) {
           id="tech-stack"
           className={`bg-card-background mb-8 lg:mb-0 lg:w-1/2 ${isExpanded ? 'h-fit' : ''} rounded-3xl p-8 shadow-lg`}
         >
-          <h3 className="text-secondary">Top Technical Features</h3>
+          <h3 className="text-text-secondary">Top Technical Features</h3>
           {project.topFeatures.map((feature) => (
             <p
               key={feature.id}
@@ -110,7 +110,7 @@ function Project({ project }) {
           id="about-project"
           className={`relative ${ isExpanded ? 'h-full' : 'h-96'} overflow-hidden bg-card-background rounded-3xl pt-4 px-4 shadow-lg`}
         >
-          <h3 className="text-secondary my-3">About the Project</h3>
+          <h3 className="text-text-secondary my-3">About the Project</h3>
           <ReactMarkdown className="prose text-text">
             {project.longDescription}
           </ReactMarkdown>

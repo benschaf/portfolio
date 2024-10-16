@@ -37,7 +37,7 @@ function BrandIcon({
             rel="noopener noreferrer"
             className="flex items-center"
           >
-            <span className="ml-1 bg-white text-secondary rounded-full px-2 py-1 text-xs">
+            <span className="ml-1 bg-white text-text-secondary rounded-full px-2 py-1 text-xs">
               {name}
             </span>
             <FontAwesomeIcon icon={faExternalLinkSquareAlt} className="ml-2" />

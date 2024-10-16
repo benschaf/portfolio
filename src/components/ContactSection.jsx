@@ -6,7 +6,7 @@ import ContactLink from "./ContactLink";
 const ContactSection = () => {
   return (
     <section
-      className="my-16 md:p-9 bg-[#e3eefc] dark:bg-card-background rounded-3xl text-center"
+      className="my-16 md:p-9 bg-orange-50 dark:bg-card-background rounded-3xl text-center"
       id="contact"
     >
       <h2 className="text-5xl text-center font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-teal-500 inline-block text-transparent bg-clip-text">

@@ -149,10 +149,10 @@ const ContactForm = () => {
       <div className="relative">
         <button
           type="submit"
-          className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 bg-orange-500 text-white hover:bg-orange-600 transition-colors"
+          className="whitespace-nowrap border border-secondary-btn-background rounded-lg w-fit py-2 px-4 bg-teal-900 text-white hover:bg-teal-700 transform hover:scale-105 transition-all duration-500"
         >
           <FontAwesomeIcon className="mr-2" icon={faEnvelope} />
-          Submit
+          Send Message
         </button>
       </div>
       <div>

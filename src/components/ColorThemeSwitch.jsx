@@ -8,6 +8,7 @@ function ColorThemeSwitch( {className, toggleFunction, isDarkMode } ) {
       <label className="flex items-center cursor-pointer relative group">
         <input
           type="checkbox"
+          aria-label="Toggle dark mode"
           checked={isDarkMode}
           onChange={toggleFunction}
           className="sr-only peer"
