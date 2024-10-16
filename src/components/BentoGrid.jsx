@@ -21,7 +21,11 @@ import {
   SiLinkedin,
   SiGithub,
 } from "@icons-pack/react-simple-icons";
-import { faPlus, faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import {
+  faDownload,
+  faUserPlus,
+} from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const tools = [
   { icon: SiDjango, name: "Django" },
@@ -42,15 +46,16 @@ const languages = [
 ];
 
 function BentoGrid() {
+  const { t } = useTranslation();
   return (
     <section className="mt-2 md:mt-0">
-      <h2 className="hidden">About me</h2>
+      <h2 className="hidden">{t("About me")}</h2>
       <div className="flex justify-center">
         <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-8 gap-4">
-          <GridTile className="row-start-1 col-span-2 !bg-transparent md:row-span-1 lg:row-span-2 md:!bg-white md:col-start-5 lg:col-start-5 md:row-start-1 !p-0">
+          <GridTile className="row-start-1 col-span-2 !bg-transparent md:row-span-2 lg:row-span-2 md:!bg-white md:col-start-5 lg:col-start-5 md:row-start-1 !p-0">
             <img
               src="/headshot.png"
-              alt="Headshot"
+              alt={t("Headshot")}
               className="rounded-full md:rounded-3xl w-1/2 md:w-full h-full object-cover"
               loading="lazy"
             />
@@ -61,29 +66,25 @@ function BentoGrid() {
           >
             <div>
               <p className="bg-white dark:bg-card-background border border-secondary shadow-inner w-fit rounded-md px-2 font-mono mb-2">
-                Hi, my name is
+                {t("Hi, my name is")}
               </p>
               <h3 className="text-5xl md:text-7xl">Benjamin Schäfer</h3>
             </div>
             <div>
               <p className="font-bold text-xl self-center text-text-secondary mt-6">
-                I am a Fullstack Developer with a focus on Django, React and modern
-                web technologies.
-              </p>
-              <p className="text-lg md:text-xl text-text-secondary mt-3">
-                I come from a professional background in education
+                {t("Hero Subtitle")}
               </p>
             </div>
             <a
               href="#contact"
-              className="group cursor-pointer mt-10 md:mt-5 md:ml-auto lg:ml-0 text-xl w-fit h-fit p-1 self-end transition-all duration-500 bg-teal-600 hover:bg-teal-900 hover:shadow-xl transform hover:scale-105 flex items-center whitespace-nowrap text-white rounded-lg py-2 px-4"
+              className="group cursor-pointer mt-10 md:mt-5 md:ml-auto lg:ml-0 text-xl w-fit h-fit p-1 self-end transition-all duration-500 bg-teal-600 hover:bg-teal-900 hover:shadow-xl transform hover:scale-105 flex items-center whitespace-nowrap text-white rounded-full py-2 px-4"
             >
               <FontAwesomeIcon icon={faUserPlus} />
-              <span className="pl-2">Hire me</span>
+              <span className="pl-2">{t("Hire me")}</span>
             </a>
           </GridTile>
           <GridTile
-            title="Languages I know"
+            title={t("Languages I know")}
             className="col-span-2 md:row-span-1 lg:row-span-2 md:col-span-2 md:col-start-1 md:row-start-3"
             innerClassName="flex items-center justify-center"
           >
@@ -98,7 +99,7 @@ function BentoGrid() {
             </div>
           </GridTile>
           <GridTile
-            title="Tools I use"
+            title={t("Tools I use")}
             className="col-span-2 md:col-span-4 md-row-span-1 lg:row-span-2 md:col-start-3 md:row-start-3"
             innerClassName="flex items-center justify-center"
           >
@@ -114,26 +115,26 @@ function BentoGrid() {
             </div>
           </GridTile>
           <GridTile
-            title="My Diploma"
+            title={t("My Diploma")}
             className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-1 lg:col-start-1 md:row-start-4"
           >
             <div className="flex flex-col space-y-4">
               <div className="text-center">
-                <p className="font-semibold mt-3">Fullstack Web Development</p>
+                <p className="font-semibold mt-3">{t("Fullstack Web Development")}</p>
                 <p className="text-sm text-text-secondary">
-                  Grade: Distinction
+                  {t("Grade Distinction")}
                 </p>
               </div>
               <CodeInstituteLogo className="h-10 mx-auto" />
             </div>
           </GridTile>
           <GridTile
-            title="My Degree"
+            title={t("My Degree")}
             className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-3 lg:col-start-3 md:row-start-4 lg:row-start-5"
           >
             <div className="flex flex-col space-y-4">
               <p className="font-semibold mt-3 text-center">
-                Master of Arts and Education
+                {t("Master of Arts and Education")}
               </p>
               <PHTGLogo className="h-10 mx-auto" />
             </div>
@@ -151,7 +152,7 @@ function BentoGrid() {
           </GridTile>
           <GridTile
             className="hidden md:block md:col-span-4 md:row-span-1 md:col-start-1 lg:col-start-5 md:row-start-6 lg:row-start-5"
-            title="My Github Activity"
+            title={t("My Github Activity")}
             innerClassName="flex justify-center"
           >
             <MyGithubCalendar />
@@ -164,13 +165,13 @@ function BentoGrid() {
               href="https://www.linkedin.com/in/beni-schaefer/"
               rel="noopener noreferrer"
               target="_blank"
-              aria-label="LinkedIn Profile"
+              aria-label={t("LinkedIn Profile")}
               className="flex items-center"
             >
               <BrandIcon
                 icon={SiLinkedin}
                 color="default"
-                name="connect"
+                name={t("connect")}
                 link="https://www.linkedin.com/in/beni-schaefer/"
               />
             </a>
@@ -184,11 +185,12 @@ function BentoGrid() {
             >
               <img
                 src="/cv_thumbnail.png"
-                alt="CV Thumbnail"
+                alt={t("CV Thumbnail")}
                 className="w-2/3 object-scale-down [filter:drop-shadow(0_0_1.75rem_rgba(0,_0,_0,_0.2))]"
               />
-              <div className="border border-card-btn-background hover:bg-card-btn-background text-text rounded-full py-2 px-3">
-                download my CV
+              <div className="bg-black w-fit text-white text-center hover:text-black hover:bg-card-btn-background transition-colors text-text rounded-full py-2 px-3">
+                <FontAwesomeIcon icon={faDownload} className="mr-2"/>
+                {t("download my CV")}
               </div>
             </a>
           </GridTile>
@@ -200,12 +202,12 @@ function BentoGrid() {
               href="https://github.com/benschaf"
               rel="noopener noreferrer"
               target="_blank"
-              aria-label="GitHub Profile"
+              aria-label={t("GitHub Profile")}
               className="flex items-center"
             >
               <BrandIcon
                 icon={SiGithub}
-                name="benschaf"
+                name={t("benschaf")}
                 color="default"
                 link="https://github.com/benschaf"
                 className="invert-icon"

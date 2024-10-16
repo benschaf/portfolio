@@ -6,7 +6,7 @@ function GridTile({ className, children, title, innerClassName }) {
       className={`${className} bg-card-background text-text rounded-3xl p-5`}
     >
       <h3 className="text-text-secondary">{title}</h3>
-      <div className={`w-full h-full ${innerClassName}`}>{children}</div>
+      <div className={`w-full h-full flex items-center ${innerClassName}`}>{children}</div>
     </div>
   );
 }

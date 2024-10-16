@@ -26,8 +26,10 @@ import {
   SiFigma,
   SiShieldsdotio,
 } from "@icons-pack/react-simple-icons";
+import { useTranslation } from "react-i18next";
 
 function Projects() {
+  const { t } = useTranslation();
   const techStack = [
     {
       id: 1,
@@ -312,12 +314,12 @@ function Projects() {
 
   return (
     <section className="pt-20" id="projects">
-      <h2 className="text-4xl">My Portfolio Projects</h2>
+      <h2 className="text-4xl">{t('My Portfolio Projects')}</h2>
       {projects.map((project) => (
           <Project project={project}></Project>
       ))}
       <p>
-        Check out more of my projects on my{" "}
+        {t('Check out more of my projects on my')}{" "}
         <a
           href="http://github.com/benschaf"
           target="_blank"

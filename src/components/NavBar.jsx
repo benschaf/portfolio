@@ -6,30 +6,32 @@ import {
   faProjectDiagram,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
+  const { t } = useTranslation();
   const navbarItems = [
     {
       id: 1,
-      name: "Home",
+      name: t("Home"),
       href: "#",
       icon: faHome,
     },
     {
       id: 2,
-      name: "About",
+      name: t("About"),
       href: "#about",
       icon: faUser,
     },
     {
       id: 3,
-      name: "Projects",
+      name: t("Projects"),
       href: "#projects",
       icon: faProjectDiagram,
     },
     {
       id: 4,
-      name: "Contact",
+      name: t("Contact"),
       href: "#contact",
       icon: faEnvelope,
     },

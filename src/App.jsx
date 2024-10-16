@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Header from './components/Header'
 import NavBar from './components/NavBar';
-import LanguagePicker from './components/LanguagePicker';
 import About from './components/About';
 import ColorThemeSwitch from './components/ColorThemeSwitch';
+import LanguageSwitch from './components/LanguageSwitch';
 import BentoGrid from './components/BentoGrid';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
@@ -37,7 +37,7 @@ function App() {
     <>
       <Header>
         <NavBar />
-        {/* <LanguagePicker /> */}
+        <LanguageSwitch />
         <ColorThemeSwitch className="hidden md:block" toggleFunction={toggleTheme} isDarkMode={isDarkMode} />
       </Header>
       <main className='mx-4 md:w-[80vw] md:mx-auto max-w-7xl'>

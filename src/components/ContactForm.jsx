@@ -7,8 +7,10 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import useForm from "../hooks/useForm";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t, i18n } = useTranslation();
   const {
     formData,
     submitStatus,
@@ -27,7 +29,7 @@ const ContactForm = () => {
       !formData.message.isValid
     ) {
       setSubmitStatus({
-        message: "Please fill in all fields correctly.",
+        message: t("Please fill in all fields correctly."),
         type: "error",
       });
       return;
@@ -45,15 +47,16 @@ const ContactForm = () => {
       .then(
         (response) => {
           setSubmitStatus({
-            message:
-              "Message sent successfully! Give me a call if you want to - my phone number will be in your inbox in a few moments.",
+            message: t(
+              "Message sent successfully! Give me a call if you want to - my phone number will be in your inbox in a few moments."
+            ),
             type: "success",
           });
           console.log("SUCCESS!", response.status, response.text);
         },
         (error) => {
           setSubmitStatus({
-            message: "Message failed to send. Please try again later.",
+            message: t("Message failed to send. Please try again later."),
             type: "error",
           });
           console.log("FAILED...", error);
@@ -82,7 +85,7 @@ const ContactForm = () => {
           htmlFor="user_name"
           className="cursor-text absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm pl-2"
         >
-          Name
+          {t("Name")}
         </label>
         {formData.name.error && formData.name.edited ? (
           <p className="text-red-600 bg-red-200 rounded mt-1 w-fit px-2 text-sm">
@@ -108,7 +111,7 @@ const ContactForm = () => {
           htmlFor="user_email"
           className="cursor-text absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm pl-2"
         >
-          Email Address
+          {t("Email Address")}
         </label>
         {formData.email.error && formData.email.edited ? (
           <p className="text-red-600 bg-red-200 rounded mt-1 w-fit px-2 text-sm">
@@ -134,7 +137,7 @@ const ContactForm = () => {
           htmlFor="message"
           className="cursor-text absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm pl-2"
         >
-          Message
+          {t("Message")}
         </label>
         {formData.message.error && formData.message.edited ? (
           <p className="text-red-600 bg-red-200 rounded mt-1 w-fit px-2 text-sm">
@@ -152,7 +155,7 @@ const ContactForm = () => {
           className="whitespace-nowrap border border-secondary-btn-background rounded-lg w-fit py-2 px-4 bg-teal-900 text-white hover:bg-teal-700 transform hover:scale-105 transition-all duration-500"
         >
           <FontAwesomeIcon className="mr-2" icon={faEnvelope} />
-          Send Message
+          {t("Send Message")}
         </button>
       </div>
       <div>
