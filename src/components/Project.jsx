@@ -9,8 +9,10 @@ import {
   faArrowUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from 'react-i18next';
 
 function Project({ project }) {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleExpandToggle = () => {
@@ -23,13 +25,13 @@ function Project({ project }) {
         <div className="flex gap-12">
           <div className="lg:w-full">
             <div className="z-30 sticky md:static -mx-4 px-4 top-0 backdrop-blur-3xl md:backdrop-blur-none">
-              <p className="font-bold text-text-secondary">Portfolio Project</p>
+              <p className="font-bold text-text-secondary">{t('Portfolio Project')}</p>
               <h2 className="text-3xl text-text">{project.name}</h2>
             </div>
             <p className="my-4 font-semibold text-text">
               {project.description}
             </p>
-            <h3>Tech Stack</h3>
+            <h3>{t('Tech Stack')}</h3>
             <ul id="tech-stack" className="flex gap-2 flex-wrap">
               {project.techStack.map((tech) => (
                 <li key={tech.id}>
@@ -47,9 +49,9 @@ function Project({ project }) {
                 href={project.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                className="whitespace-nowrap rounded-full w-fit py-2 px-4 bg-blue-600 text-white hover:bg-blue-700 transition-colors"
               >
-                Visit live Website
+                {t('Visit live Website')}
                 <FontAwesomeIcon
                   className="ml-3"
                   icon={faArrowUpRightFromSquare}
@@ -59,9 +61,9 @@ function Project({ project }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="whitespace-nowrap border border-secondary-btn-background rounded-full w-fit py-2 px-4 bg-gray-300 hover:bg-gray-900 hover:text-white transition-colors"
+                className="whitespace-nowrap rounded-full w-fit py-2 px-4 bg-gray-300 hover:bg-gray-900 dark:text-black hover:text-white transition-colors"
               >
-                GitHub
+                {t('GitHub')}
                 <FontAwesomeIcon
                   className="ml-3"
                   icon={faGithub}
@@ -70,14 +72,14 @@ function Project({ project }) {
             </div>
             <img
               src={project.image}
-              alt={`Mockup of the ${project.name} project.`}
+              alt={t('Mockup of the {{projectName}} project.', { projectName: project.name })}
               className="mt-3 md:w-2/3 mx-auto lg:hidden"
             />
           </div>
           <div>
             <img
               src={project.image}
-              alt={`Mockup of the ${project.name} project.`}
+              alt={t('Mockup of the {{projectName}} project.', { projectName: project.name })}
               className="mt-3 hidden lg:block lg:w-full lg:object-contain lg:self-start"
             />
           </div>
@@ -88,7 +90,7 @@ function Project({ project }) {
           id="tech-stack"
           className={`bg-card-background mb-8 lg:mb-0 lg:w-1/2 ${isExpanded ? 'h-fit' : ''} rounded-3xl p-8 shadow-lg`}
         >
-          <h3 className="text-text-secondary">Top Technical Features</h3>
+          <h3 className="text-text-secondary">{t('Top Technical Features')}</h3>
           {project.topFeatures.map((feature) => (
             <p
               key={feature.id}
@@ -110,7 +112,7 @@ function Project({ project }) {
           id="about-project"
           className={`relative ${ isExpanded ? 'h-full' : 'h-96'} overflow-hidden bg-card-background rounded-3xl pt-4 px-4 shadow-lg`}
         >
-          <h3 className="text-text-secondary my-3">About the Project</h3>
+          <h3 className="text-text-secondary my-3">{t('About the Project')}</h3>
           <ReactMarkdown className="prose text-text">
             {project.longDescription}
           </ReactMarkdown>
@@ -119,11 +121,11 @@ function Project({ project }) {
               onClick={handleExpandToggle}
               className={`lg:mx-0 ${
                 isExpanded
-                  ? "bg-transparent border border-secondary"
-                  : "bg-orange-400 dark:hover:text-black hover:bg-orange-300"
+                  ? "bg-transparent border border-secondary hover:bg-secondary-btn-background dark:hover:text-black"
+                  : "bg-orange-400 dark:text-black hover:bg-orange-300"
               } rounded-full py-2 px-4 block ml-auto w-fit lg:ml-auto text-center transition-colors duration-300`}
             >
-              {isExpanded ? "See Less" : "See More"}
+              {isExpanded ? t('See Less') : t('See More')}
               <FontAwesomeIcon
                 className="ml-3"
                 icon={isExpanded ? faAngleUp : faAngleDown}

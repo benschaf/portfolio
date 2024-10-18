@@ -188,7 +188,7 @@ function BentoGrid() {
                 alt={t("CV Thumbnail")}
                 className="w-2/3 object-scale-down [filter:drop-shadow(0_0_1.75rem_rgba(0,_0,_0,_0.2))]"
               />
-              <div className="bg-black w-fit text-white text-center hover:text-black hover:bg-card-btn-background transition-colors text-text rounded-full py-2 px-3">
+              <div className="bg-black w-fit text-white text-center hover:text-black dark:hover:text-white hover:bg-card-btn-background transition-colors text-text rounded-full py-2 px-3">
                 <FontAwesomeIcon icon={faDownload} className="mr-2"/>
                 {t("download my CV")}
               </div>
