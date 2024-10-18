@@ -11,7 +11,7 @@ const ContactLink = ({ href, icon: Icon, label, subLabel }) => (
       </div>
       <div className="text-left">
         <p>{label}</p>
-        <p className="text-blue-600 group-hover:text-blue-700">{subLabel}</p>
+        <p className="text-blue-600 group-hover:text-blue-700 dark:text-blue-500 dark:group-hover:text-blue-300">{subLabel}</p>
       </div>
     </div>
   </a>

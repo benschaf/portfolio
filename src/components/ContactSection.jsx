@@ -8,7 +8,7 @@ const ContactSection = () => {
   const { t } = useTranslation();
   return (
     <section
-      className="my-16 md:p-9 rounded-3xl text-center bg-card-background"
+      className="my-16 py-8 md:p-9 rounded-3xl text-center bg-card-background"
       id="contact"
     >
       <h2 className="text-5xl text-center font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-teal-500 inline-block text-transparent bg-clip-text">
@@ -17,7 +17,7 @@ const ContactSection = () => {
       <p className="text-lg mb-16 text-center">
         {t("Let's create something together")}
       </p>
-      <div className="flex flex-col gap-16 md:gap-4 justify-around items-center lg:items-start lg:flex-row">
+      <div className="flex flex-col gap-16 md:p-8 md:gap-4 justify-around items-center lg:items-start lg:flex-row">
         <div className="flex flex-col gap-6">
           <p className="font-bold w-full lg:text-center">
             {t('Reach me via the following platforms')}:

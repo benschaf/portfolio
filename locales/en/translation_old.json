@@ -1,3 +1,9 @@
 {
-  "I am a Fullstack Developer with a focus on Django, React and modern web technologies": "I am a Fullstack Developer with a focus on Django, React and modern web technologies"
+  "I am a Fullstack Developer with a focus on Django, React and modern web technologies": "I am a Fullstack Developer with a focus on Django, React and modern web technologies",
+  "Name": "Name",
+  "Email Address": "Email Address",
+  "Message": "Message",
+  "Message failed to send": {
+    " Please try again later": ""
+  }
 }

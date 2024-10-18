@@ -51,9 +51,14 @@ const useForm = () => {
     validateForm();
   };
 
+  const resetForm = () => {
+    setSubmitStatus({ message: "", type: "" });
+  };
+
   return {
     formData,
     submitStatus,
+    resetForm,
     setSubmitStatus,
     handleInputBlur,
     handleFormChange,
