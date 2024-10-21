@@ -8,7 +8,7 @@ import BentoGrid from "./components/BentoGrid";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import ContactSection from "./components/ContactSection";
-import HeroSection from "./components/HeroSection";
+import HeaderElement from "./components/HeaderElement";
 import Footer from "./components/Footer";
 
 function App() {
@@ -35,14 +35,24 @@ function App() {
   return (
     <>
       <Header>
-        <NavBar />
-        <div className="flex items-center justify-around rounded-full bg-[rgba(255,255,255,.4)] dark:bg-[rgba(0,0,0,.4)] text-text p-1 backdrop-blur-3xl shadow-[10px_10px_25px_20px_rgba(0,0,0,0.2)] md:shadow-[10px_10px_25px_0px_rgba(0,0,0,0.2)]">
-          <LanguageSwitch />
-          <ColorThemeSwitch
-            toggleFunction={toggleTheme}
-            isDarkMode={isDarkMode}
-          />
-        </div>
+        <HeaderElement>
+          <div className="px-4">
+            <h1>Benjamin Schäfer</h1>
+            <p>Online Web Dev Portfolio</p>
+          </div>
+        </HeaderElement>
+        <HeaderElement>
+          <NavBar />
+        </HeaderElement>
+        <HeaderElement>
+          <div className="flex h-full items-center">
+            <LanguageSwitch />
+            <ColorThemeSwitch
+              toggleFunction={toggleTheme}
+              isDarkMode={isDarkMode}
+            />
+          </div>
+        </HeaderElement>
       </Header>
       <main className="mx-4 md:w-[80vw] md:mx-auto max-w-7xl">
         {/* <HeroSection /> */}

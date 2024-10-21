@@ -19,7 +19,7 @@ function LanguageSwitch({ className }) {
   };
 
   return (
-    <div className={`relative m-2 inline-block text-left ${className}`}>
+    <div className={`relative inline-block text-left ${className}`}>
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
         className={`flex items-center py-2 px-4 ${dropdownOpen ? 'rounded-t-2xl bg-card-btn-background' : 'rounded-full'} hover:bg-card-btn-background transition-colors`}
