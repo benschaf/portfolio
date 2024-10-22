@@ -24,7 +24,7 @@ function Project({ project }) {
       <div className="relative">
         <div className="flex gap-12">
           <div className="lg:w-full">
-            <div className="z-30 sticky md:static -mx-4 px-4 top-0 backdrop-blur-3xl md:backdrop-blur-none">
+            <div className="z-30 sticky md:static -ml-4 pl-4 -mr-16 top-0 backdrop-blur-3xl md:backdrop-blur-none">
               <p className="font-bold text-text-secondary">{t('Portfolio Project')}</p>
               <h2 className="text-3xl text-text">{project.name}</h2>
             </div>
