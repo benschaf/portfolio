@@ -39,7 +39,7 @@ const NavBar = () => {
 
   return (
       <nav className="h-full flex items-center">
-        <ul className="flex justify-around">
+        <ul className="flex justify-around w-full">
           {navbarItems.map((item) => (
             <li
               key={item.id}
