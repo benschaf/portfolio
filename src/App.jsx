@@ -37,7 +37,7 @@ function App() {
         <HeaderElement className="hidden md:block md:fixed md:top-2 md:left-2">
           <div className="px-4">
             <h1>Benjamin Schäfer</h1>
-            <p>Online Web Dev Portfolio</p>
+            <p>Web Dev Portfolio</p>
           </div>
         </HeaderElement>
         <HeaderElement

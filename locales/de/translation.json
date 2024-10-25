@@ -1,4 +1,29 @@
 {
+  "about": {
+    "title": "Über mich",
+    "intro": "Ich bin ein <strong>Full-Stack-Entwickler</strong> mit einem Diplom in Full Stack Software Development vom Code Institute (Kursdauer: 1 Jahr, Abschlussnote: 1.0). Ich bin offen für Vor-Ort- und Remote-Arbeit.",
+    "frameworksTitle": "Ich habe mit folgenden Frameworks und Bibliotheken Erfahrung:",
+    "frameworks": {
+      "django": "Django",
+      "react": "React",
+      "tailwind": "Tailwind",
+      "bootstrap": "Bootstrap",
+      "jquery": "jQuery",
+      "git": "Git",
+      "heroku": "Heroku",
+      "stripe": "Stripe"
+    },
+    "proficientTitle": "Ich benutze die folgenden Programmiersprachen",
+    "proficient": {
+      "html5": "HTML5",
+      "javascript": "JavaScript",
+      "css3": "CSS3",
+      "python": "Python"
+    },
+    "experience": "Nach Abschluss meines Masters in Pädagogik arbeitete ich ein Jahr lang Vollzeit als Lehrer. Aufgrund dieser Erfahrung habe ich starke <strong>Kommunikations</strong>-, <strong>Zusammenarbeits</strong>- und <strong>Projektmanagement</strong>-Fähigkeiten entwickelt.",
+    "passion": "Ich bin leidenschaftlich daran interessiert, <strong>benutzerfreundliche</strong>, <strong>zugängliche</strong> und <strong>responsive Webanwendungen</strong> zu erstellen, die reale Probleme lösen.",
+    "eager": "Ich freue mich darauf, einem Team beizutreten, in dem ich meine technischen Fähigkeiten weiterentwickeln und zu wirkungsvollen Projekten beitragen kann."
+  },
   "About me": "Über mich",
   "Headshot": "Profilbild",
   "Hi, my name is": "Hallo, ich bin",
@@ -45,8 +70,6 @@
   "Mockup of the {{projectName}} project": "Bildschirmausschnitte des Projekts {{projectName}}",
   "Top Technical Features": "Die wichtigsten technischen Features",
   "About the Project": "Über das Projekt",
-  "See Less": "Weniger anzeigen",
-  "See More": "Mehr anzeigen",
   "My Portfolio Projects": "Meine Portfolio-Projekte",
   "Check out more of my projects on my": "Schauen Sie sich mehr meiner Projekte auf meinem"
 }

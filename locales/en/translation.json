@@ -1,4 +1,29 @@
 {
+  "about": {
+    "title": "About Me",
+    "intro": "I am a <strong>full-stack developer</strong> with a Diploma in Full Stack Software Development from Code Institute (Course Duration: 1 year, Grade: Distinction). I'm open to on-site and remote work.",
+    "frameworksTitle": "Frameworks and libraries I have experience with include:",
+    "frameworks": {
+      "django": "Django",
+      "react": "React",
+      "tailwind": "Tailwind",
+      "bootstrap": "Bootstrap",
+      "jquery": "jQuery",
+      "git": "Git",
+      "heroku": "Heroku",
+      "stripe": "Stripe"
+    },
+    "proficientTitle": "I am proficient in:",
+    "proficient": {
+      "html5": "HTML5",
+      "javascript": "JavaScript",
+      "css3": "CSS3",
+      "python": "Python"
+    },
+    "experience": "After finishing my Masters in Education, I worked full time as a teacher for 1 year. Due to this experience, I have developed strong <strong>communication</strong>, <strong>collaboration</strong>, and <strong>project management</strong> skills.",
+    "passion": "I am passionate about creating <strong>user-friendly</strong>, <strong>accessible</strong>, and <strong>responsive web applications</strong> that solve real-world problems.",
+    "eager": "I am eager to join a team where I can continue to grow my technical skills and contribute to impactful projects."
+  },
   "About me": "About me",
   "Headshot": "Headshot",
   "Hi, my name is": "Hi, my name is",
@@ -45,8 +70,6 @@
   "Mockup of the {{projectName}} project": "Mockup of the {{projectName}} project",
   "Top Technical Features": "Top Technical Features",
   "About the Project": "About the Project",
-  "See Less": "See Less",
-  "See More": "See More",
   "My Portfolio Projects": "My Portfolio Projects",
   "Check out more of my projects on my": "Check out more of my projects on my"
 }
