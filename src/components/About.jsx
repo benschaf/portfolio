@@ -1,11 +1,12 @@
 import React from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 function About() {
   return (
     <section className="pt-20 max-w-prose mx-auto" id="about">
       <h2 className="text-3xl mb-4 font-bold">About Me</h2>
       <p className="mb-4">
-        I am a <strong>full-stack developer</strong> with a Diploma in Full Stack Software Development from Code Institute (Course Duration: 1 year, Grade: Distinction).
+        I am a <strong>full-stack developer</strong> with a Diploma in Full Stack Software Development from Code Institute (Course Duration: 1 year, Grade: Distinction). Im Open to on site and remote work.
       </p>
       <div className="flex flex-col md:flex-row gap-9">
         <div className="w-full md:w-1/2">

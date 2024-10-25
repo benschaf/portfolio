@@ -52,7 +52,7 @@ function BentoGrid() {
       <h2 className="hidden">{t("About me")}</h2>
       <div className="flex justify-center">
         <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-8 gap-4">
-          <GridTile className="row-start-1 col-span-2 !bg-transparent md:row-span-2 lg:row-span-2 md:!bg-white md:col-start-5 lg:col-start-5 md:row-start-1 !p-0">
+          <GridTile className="row-start-1 col-span-2 !bg-transparent md:row-span-1 lg:row-span-2 md:!bg-white md:col-start-5 lg:col-start-5 md:row-start-1 !p-0">
             <img
               src="/headshot.png"
               alt={t("Headshot")}
@@ -117,8 +117,9 @@ function BentoGrid() {
           <GridTile
             title={t("My Diploma")}
             className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-1 lg:col-start-1 md:row-start-4"
+            innerClassName="pb-8"
           >
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 justify-around h-full">
               <div className="text-center">
                 <p className="font-semibold mt-3">{t("Fullstack Web Development")}</p>
                 <p className="text-sm text-text-secondary">
@@ -131,8 +132,9 @@ function BentoGrid() {
           <GridTile
             title={t("My Degree")}
             className="col-span-2 md:col-span-2 md:row-span-2 lg:row-span-1 md:col-start-3 lg:col-start-3 md:row-start-4 lg:row-start-5"
+            innerClassName="pb-8"
           >
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 justify-around h-full">
               <p className="font-semibold mt-3 text-center">
                 {t("Master of Arts and Education")}
               </p>

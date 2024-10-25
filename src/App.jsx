@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
 import ColorThemeSwitch from "./components/ColorThemeSwitch";
