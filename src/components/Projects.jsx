@@ -146,6 +146,11 @@ function Projects() {
       name: "shields.io",
       icon: SiShieldsdotio,
     },
+    {
+      id: 26,
+      name: "Full Calendar",
+      icon: null,
+    }
   ];
 
   const projects = [
@@ -155,19 +160,11 @@ function Projects() {
       description:
         "A Fullstack online Marketplace to connect students with tutors and collect payments.",
       longDescription: `
-  This is my latest project, Gipfel Tutor. It is a Learning Platform that connects students with tutors.
+  Gipfel Tutor is a Learning Platform connecting students with tutors. It features secure online payments via Stripe, seamless lesson scheduling with Calendly, and Google sign-in for a modern experience.
 
-  Top Technical Features:
-  - **Credit Card Payments using Stripe**: Securely pay for lessons online - Google Pay included. Powered by Stripe API and Stripe Webhooks.
-  - **Calendly Integration**: Schedule and cancel lessons seamlessly from the site. Powered by the Calendly API v2.
-  - **Socialaccount Login**: Sign in with Google for a passwordless and modern experience.
+  Students can browse and book tutors, manage their lessons and payments, while tutors and admins handle bookings and user accounts. The platform also has a Facebook Business Page, and a Newsletter for marketing purposes.
 
-  Key User Stories:
-  - **Students**: View a list of tutors, filter and sort based on preferences, and book lessons.
-  - **Users**: Create accounts, log in/out, reset passwords, and receive confirmation emails.
-  - **Students and Tutors**: Manage booking history, upcoming lessons, payment details, and profiles.
-  - **Admin**: Manage tutors and user accounts, ensuring platform security.
-  - **Site Owner**: Employ SEO techniques, maintain a Facebook Business Page, and provide a Newsletter.`,
+  There is a big focus on SEO optimizazione, with a sitemap, robots.txt, semantic HTML, and structured data for Google Search.`,
       websiteUrl: "https://gipfel-tutor-768a610dc54f.herokuapp.com/",
       githubUrl: "https://github.com/benschaf/gipfel-tutor",
       techStack: techStack.filter(
@@ -210,16 +207,9 @@ function Projects() {
       description:
         "An online community to share and collect waste management schedules.",
       longDescription: `
-  The tonne (German for: Waste Bin) project was created to help users manage their waste collection schedules and interact with their local community to improve waste management practices.
+The tonne project helps users manage waste collection schedules and engage with their community. Users can log in with Django Allauth and search for schedules by postcode. They can create and share customizable schedules, receive real-time reminders, and interact with schedules through uploads, ratings, and comments.
 
-  Users can:
-  - **Log in and out** using Django Allauth.
-  - **Subscribe to waste collection schedules** based on their postcode.
-  - **Contribute to the community** by creating and sharing their own highly costumizable schedules.
-  - **Receive real-time reminders** by downloading the schedule to their calendar.
-  - **Upload, rate, and comment** on waste collection schedules.
-  - **View a personalized dashboard** with relevant information.
-        `,
+A personalized dashboard provides relevant information, making it easy to stay on top of waste collection. The platform fosters community engagement by allowing users to share schedules and feedback, ensuring a collaborative approach to waste management.`,
       websiteUrl: "https://tonne-waste-reminders-a6836f2888b0.herokuapp.com/",
       githubUrl: "https://benschaf/waste-schedule",
       techStack: techStack.filter(
@@ -233,7 +223,8 @@ function Projects() {
           tech.name === "Jest" ||
           tech.name === "Django Allauth" ||
           tech.name === "PostgreSQL" ||
-          tech.name === "Cloudinary"
+          tech.name === "Cloudinary" ||
+          tech.name === "Full Calendar"
       ),
       image: tonneMockup,
       backgroundColor: "#D9F1F2",
@@ -264,14 +255,9 @@ function Projects() {
       description:
         "Käsekästchen (German for: dots and boxes) is a web app that allows users to play the game of Käsekästchen online.",
       longDescription: `
-  Käsekästchen is a practice Project I made to expand my knowledge of JavaScript and object-oriented programming.
+Käsekästchen is a JavaScript and object-oriented programming practice project. The game involves two players drawing lines on a grid of dots, aiming to complete squares. The player with the most completed squares wins.
 
-  The game is played on a grid of dots, where two players take turns drawing lines between the dots. The goal is to complete a square by drawing the fourth line around it. The player who completes the most squares wins the game.
-
-  Key Features:
-  - **Multi-Device Support**: Play the game on different devices, enjyoing a fully responsive experience.
-  - **Customizable Grid Size**: Select the size of the game grid to customize the game to your liking.
-  - **Opponent AI including Difficulty Levels**: A hand crafted AI that plays against you. Select the difficulty level to adjust the game to your skill level.`,
+Key features include multi-device support for a responsive experience, customizable grid sizes, and an AI opponent with adjustable difficulty levels. This project enhances gameplay flexibility and challenges players of varying skill levels.`,
       websiteUrl: "https://benschaf.github.io/kaesekaestchen/",
       githubUrl: "https://github.com/benschaf/kaesekaestchen",
       techStack: techStack.filter(
@@ -314,12 +300,12 @@ function Projects() {
 
   return (
     <section className="pt-20" id="projects">
-      <h2 className="text-4xl">{t('My Portfolio Projects')}</h2>
+      <h2 className="text-4xl">{t("My Portfolio Projects")}</h2>
       {projects.map((project) => (
-          <Project project={project}></Project>
+        <Project project={project}></Project>
       ))}
       <p>
-        {t('Check out more of my projects on my')}{" "}
+        {t("Check out more of my projects on my")}{" "}
         <a
           href="http://github.com/benschaf"
           target="_blank"
